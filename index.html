@@ -112,22 +112,20 @@
 
   <section id="instagram" class="max-w-6xl mx-auto px-5 py-14 md:py-20">
     <h2 id="instaTitle" class="text-4xl md:text-5xl text-center mb-8 md:mb-10"></h2>
-    <div id="instagramGrid" class="grid grid-cols-3 gap-3 md:gap-4"></div>
-    <p class="text-center text-xs md:text-sm mt-4 text-[#4A0E1C]/70">Statická galerie z reálného Instagram obsahu, průběžně doplňovaná ručně.</p>
+    <div class="grid grid-cols-3 gap-3 md:gap-4">
+      <div class="aspect-square bg-gray-200 rounded-xl flex items-center justify-center text-gray-500"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" class="w-7 h-7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></div>
+      <div class="aspect-square bg-gray-200 rounded-xl flex items-center justify-center text-gray-500"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" class="w-7 h-7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></div>
+      <div class="aspect-square bg-gray-200 rounded-xl flex items-center justify-center text-gray-500"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" class="w-7 h-7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></div>
+      <div class="aspect-square bg-gray-200 rounded-xl flex items-center justify-center text-gray-500"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" class="w-7 h-7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></div>
+      <div class="aspect-square bg-gray-200 rounded-xl flex items-center justify-center text-gray-500"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" class="w-7 h-7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></div>
+      <div class="aspect-square bg-gray-200 rounded-xl flex items-center justify-center text-gray-500"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" class="w-7 h-7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></div>
+    </div>
   </section>
 
   <footer id="kontakt" class="mt-6 pt-10 pb-12 border-t border-[#4A0E1C]/10">
     <div class="max-w-6xl mx-auto px-5 space-y-8">
-      <div class="w-full rounded-2xl overflow-hidden soft-shadow border border-[#4A0E1C]/10">
-        <iframe
-          title="Mapa: homeolka"
-          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d620.5692139335355!2d14.052242431463364!3d49.961528049553834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1scs!2scz!4v1774994601966!5m2!1scs!2scz"
-          class="w-full h-56 md:h-80"
-          style="border:0;"
-          loading="lazy"
-          allowfullscreen
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
+      <div class="w-full rounded-2xl overflow-hidden bg-gray-300 h-56 md:h-80 flex items-center justify-center text-gray-600 soft-shadow">
+        [ Placeholder: Google Maps ]
       </div>
 
       <div class="text-center space-y-3">
@@ -144,50 +142,31 @@
     </div>
   </footer>
 
+  <script type="application/json" id="siteContent">
+  {
+    "heroTitle": "homeolka",
+    "heroSub": "Stříbrný přívěs, výběrová káva a pohoda u parku.",
+    "heroCTA": "Kde nás najdete?",
+    "aboutTitle": "O nás",
+    "aboutText": "Chtěli jsme vytvořit místo, kam si rádi zajdete po procházce, cvičení nebo jen tak s dětmi. Vzali jsme přívěs se stříbrným kabátem a naplnili ho tím nejlepším, co máme rádi – od výběrové kávy přes poctivý párek v rohlíku po vyladěné koktejly při západu slunce.",
+    "offerTitle": "Co u nás najdete",
+    "offer1Title": "Káva & Pohoda",
+    "offer1Text": "Výběrová káva připravovaná s důrazem na chuť i detail. Ranní espresso, odpolední cappuccino a klidná atmosféra navíc.",
+    "offer2Title": "Něco k snědku",
+    "offer2Text": "Poctivý párek v rohlíku, drobné snacky a rychlé dobroty na cestu. Jednoduché, čerstvé a přesně to, na co máte chuť.",
+    "offer3Title": "Drink Point",
+    "offer3Text": "Lehké signature drinky, osvěžující limonády i večerní koktejly. Ideální tečka po dni u parku nebo při západu slunce.",
+    "instaTitle": "Sledujte naši jízdu na @homeolka",
+    "footerNote": "Když svítí sluníčko, jsme tu pro vás."
+  }
+  </script>
+
   <script>
-    const cameraPlaceholderSvg = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" class="w-7 h-7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>`;
-
-    async function loadContent() {
-      try {
-        const response = await fetch('./site-content.json', { cache: 'no-store' });
-        if (!response.ok) throw new Error(`HTTP ${response.status}`);
-        const content = await response.json();
-        Object.keys(content).forEach((id) => {
-          const el = document.getElementById(id);
-          if (el) el.textContent = content[id];
-        });
-      } catch (error) {
-        console.error('Nepodařilo se načíst obsah ze site-content.json:', error);
-      }
-    }
-
-    async function loadInstagramFeed() {
-      const grid = document.getElementById('instagramGrid');
-      if (!grid) return;
-
-      try {
-        const response = await fetch('./assets/instagram/instagram-feed.json', { cache: 'no-store' });
-        if (!response.ok) throw new Error(`HTTP ${response.status}`);
-        const items = await response.json();
-
-        grid.innerHTML = items.map((item) => `
-          <a href="${item.link || '#'}" target="_blank" rel="noreferrer" class="group block rounded-xl overflow-hidden soft-shadow bg-gray-200">
-            <div class="aspect-square relative">
-              <img src="${item.src}" alt="${item.alt || 'Instagram fotka'}" loading="lazy" class="w-full h-full object-cover transition duration-300 group-hover:scale-[1.02]" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-              <div class="absolute inset-0 hidden items-center justify-center text-gray-500 bg-gray-200">${cameraPlaceholderSvg}</div>
-            </div>
-          </a>
-        `).join('');
-      } catch (error) {
-        console.error('Nepodařilo se načíst assets/instagram/instagram-feed.json:', error);
-        grid.innerHTML = Array.from({ length: 6 }).map(() => `
-          <div class="aspect-square bg-gray-200 rounded-xl flex items-center justify-center text-gray-500">${cameraPlaceholderSvg}</div>
-        `).join('');
-      }
-    }
-
-    loadContent();
-    loadInstagramFeed();
+    const content = JSON.parse(document.getElementById('siteContent').textContent);
+    Object.keys(content).forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) el.textContent = content[id];
+    });
   </script>
 </body>
 </html>
