@@ -9,3 +9,6 @@ Tato složka slouží pro ručně spravovanou (statickou) galerii.
 4. Pokud obrázek neexistuje, karta se vůbec nevykreslí.
 
 Aktuálně jsou připravené 3 položky.
+3. Commit + push.
+
+Pokud obrázek chybí, UI automaticky ukáže placeholder s ikonou kamery.
