@@ -5,14 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>HOMEolka — stříbrný Airstream drink point</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Google tag (gtag.js) -->
+  <!-- Google tag (gtag.js) - načtený, ale analytika se spustí až po souhlasu -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-9SHFK2QYSL"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
 
-    gtag('config', 'G-9SHFK2QYSL');
+    gtag('consent', 'default', {
+      analytics_storage: 'denied',
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied'
+    });
+
+    gtag('js', new Date());
   </script>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Montserrat:wght@300;400&display=swap');
@@ -146,16 +152,11 @@
 
   <footer id="kontakt" class="mt-6 pt-10 pb-12 border-t border-[#4A0E1C]/10">
     <div class="max-w-6xl mx-auto px-5 space-y-8">
-      <div class="w-full rounded-2xl overflow-hidden soft-shadow border border-[#4A0E1C]/10">
-        <iframe
-          title="Mapa: homeolka"
-          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d620.5692139335355!2d14.052242431463364!3d49.961528049553834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1scs!2scz!4v1774994601966!5m2!1scs!2scz"
-          class="w-full h-56 md:h-80"
-          style="border:0;"
-          loading="lazy"
-          allowfullscreen
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
+      <div id="mapContainer" class="w-full rounded-2xl overflow-hidden soft-shadow border border-[#4A0E1C]/10 bg-gray-100 h-56 md:h-80 flex items-center justify-center">
+        <div class="text-center px-6">
+          <p class="font-light mb-3">Mapa je externí obsah od Google. Načteme ji až po vašem kliknutí.</p>
+          <button type="button" onclick="loadMap()" class="px-5 py-2 rounded-full border border-[#D83B7D] text-[#D83B7D] text-sm hover:bg-[#D83B7D]/5 transition">Načíst mapu</button>
+        </div>
       </div>
 
       <div class="text-center space-y-3">
@@ -166,11 +167,163 @@
           <span class="opacity-30">•</span>
           <a href="https://www.facebook.com/HOMEolka" target="_blank" rel="noreferrer" class="hover:text-[#D83B7D] transition">Facebook</a>
         </div>
+        <div class="pt-1">
+          <button type="button" onclick="openCookieSettings()" class="text-xs underline underline-offset-2 opacity-70 hover:opacity-100 transition">Nastavení soukromí</button>
+        </div>
       </div>
     </div>
   </footer>
 
+  <div id="cookieBanner" class="hidden fixed bottom-4 inset-x-4 z-[60]">
+    <div class="max-w-3xl mx-auto glass soft-shadow rounded-2xl p-4 md:p-5">
+      <p class="text-sm md:text-base">Používáme pouze nezbytné cookies a volitelnou analytiku (GA4) pro zlepšování webu.</p>
+      <p class="text-xs opacity-80 mt-1">Volbu můžete kdykoli změnit v odkazu „Nastavení soukromí" ve footeru. Více v dokumentech: <a href="/zasady-cookies.pdf" target="_blank" rel="noreferrer" class="underline">Zásady cookies</a> a <a href="/zasady-ochrany-osobnich-udaju.pdf" target="_blank" rel="noreferrer" class="underline">Ochrana osobních údajů</a>.</p>
+      <div class="mt-3 flex flex-col sm:flex-row gap-2 sm:justify-end">
+        <button type="button" onclick="rejectAll()" class="px-4 py-2 rounded-full border border-[#4A0E1C]/30 text-sm">Odmítnout vše</button>
+        <button type="button" onclick="acceptAll()" class="px-4 py-2 rounded-full text-white text-sm" style="background:#D83B7D;">Přijmout vše</button>
+      </div>
+    </div>
+  </div>
+
   <script>
+    const GA_MEASUREMENT_ID = 'G-9SHFK2QYSL';
+    const CONSENT_STORAGE_KEY = 'homeolka_cookie_consent_v1';
+    const MAP_CONSENT_STORAGE_KEY = 'homeolka_map_consent_v1';
+    const CONSENT_MAX_AGE_DAYS = 180;
+    let gaConfigured = false;
+
+    function showCookieBanner() {
+      const banner = document.getElementById('cookieBanner');
+      if (banner) banner.classList.remove('hidden');
+    }
+
+    function hideCookieBanner() {
+      const banner = document.getElementById('cookieBanner');
+      if (banner) banner.classList.add('hidden');
+    }
+
+    function saveConsent(status) {
+      const payload = {
+        status,
+        ts: Date.now()
+      };
+      localStorage.setItem(CONSENT_STORAGE_KEY, JSON.stringify(payload));
+    }
+
+    function readConsent() {
+      try {
+        const raw = localStorage.getItem(CONSENT_STORAGE_KEY);
+        if (!raw) return null;
+        const parsed = JSON.parse(raw);
+        if (!parsed?.status || !parsed?.ts) return null;
+
+        const maxAgeMs = CONSENT_MAX_AGE_DAYS * 24 * 60 * 60 * 1000;
+        if (Date.now() - parsed.ts > maxAgeMs) {
+          localStorage.removeItem(CONSENT_STORAGE_KEY);
+          return null;
+        }
+
+        return parsed.status;
+      } catch (error) {
+        console.error('Nepodařilo se přečíst cookie consent stav:', error);
+        return null;
+      }
+    }
+
+    function saveMapConsent() {
+      const payload = { granted: true, ts: Date.now() };
+      localStorage.setItem(MAP_CONSENT_STORAGE_KEY, JSON.stringify(payload));
+    }
+
+    function readMapConsent() {
+      try {
+        const raw = localStorage.getItem(MAP_CONSENT_STORAGE_KEY);
+        if (!raw) return false;
+        const parsed = JSON.parse(raw);
+        if (!parsed?.granted || !parsed?.ts) return false;
+
+        const maxAgeMs = CONSENT_MAX_AGE_DAYS * 24 * 60 * 60 * 1000;
+        if (Date.now() - parsed.ts > maxAgeMs) {
+          localStorage.removeItem(MAP_CONSENT_STORAGE_KEY);
+          return false;
+        }
+
+        return true;
+      } catch (error) {
+        console.error('Nepodařilo se přečíst map consent stav:', error);
+        return false;
+      }
+    }
+
+    function clearMapConsent() {
+      localStorage.removeItem(MAP_CONSENT_STORAGE_KEY);
+    }
+
+    function applyConsent(status) {
+      const granted = status === 'accepted';
+
+      gtag('consent', 'update', {
+        analytics_storage: granted ? 'granted' : 'denied',
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied'
+      });
+
+      if (granted && !gaConfigured) {
+        gtag('config', GA_MEASUREMENT_ID);
+        gaConfigured = true;
+      }
+    }
+
+    function acceptAll() {
+      saveConsent('accepted');
+      applyConsent('accepted');
+      hideCookieBanner();
+    }
+
+    function rejectAll() {
+      saveConsent('rejected');
+      clearMapConsent();
+      applyConsent('rejected');
+      hideCookieBanner();
+    }
+
+    function openCookieSettings() {
+      showCookieBanner();
+    }
+
+    function initConsent() {
+      const consent = readConsent();
+      if (!consent) {
+        showCookieBanner();
+        return;
+      }
+
+      applyConsent(consent);
+      hideCookieBanner();
+    }
+
+    function loadMap(persistConsent = true) {
+      const mapContainer = document.getElementById('mapContainer');
+      if (!mapContainer) return;
+
+      if (persistConsent) {
+        saveMapConsent();
+      }
+
+      mapContainer.innerHTML = `
+        <iframe
+          title="Mapa: homeolka"
+          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d620.5692139335355!2d14.052242431463364!3d49.961528049553834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1scs!2scz!4v1774994601966!5m2!1scs!2scz"
+          class="w-full h-56 md:h-80"
+          style="border:0;"
+          loading="lazy"
+          allowfullscreen
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      `;
+    }
+
     function renderInstagramFallback(count = 3) {
       const grid = document.getElementById('instagramGrid');
       if (!grid) return;
@@ -230,6 +383,10 @@
       }
     }
 
+    initConsent();
+    if (readMapConsent()) {
+      loadMap(false);
+    }
     loadContent();
     loadInstagramFeed();
   </script>
