@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>HOMEolka — stříbrný Airstream drink point</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png" />
+  <link rel="icon" href="/assets/favicon/favicon.ico" />
+  <link rel="manifest" href="/assets/favicon/site.webmanifest" />
   <!-- Google tag (gtag.js) - načtený, ale analytika se spustí až po souhlasu -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-9SHFK2QYSL"></script>
   <script>
@@ -26,7 +31,7 @@
     :root{
       --bg: #FDFBF7;
       --wine: #4A0E1C;
-      --magenta: #D83B7D;
+      --magenta: #FF585D;
     }
 
     html { scroll-behavior: smooth; }
@@ -44,23 +49,38 @@
     }
 
     .soft-shadow{ box-shadow: 0 8px 30px rgba(74,14,28,0.08); }
+
+    .text-wine { color: var(--wine); }
+    .text-brand { color: var(--magenta); }
+    .text-wine-85 { color: rgba(74,14,28,0.85); }
+    .text-wine-80 { color: rgba(74,14,28,0.80); }
+    .text-wine-70 { color: rgba(74,14,28,0.70); }
+    .hover-text-brand:hover { color: var(--magenta); }
+
+    .bg-brand { background: var(--magenta); }
+    .bg-shell-85 { background: rgba(253,251,247,0.85); }
+    .hover-bg-brand-soft:hover { background: rgba(255,88,93,0.05); }
+
+    .border-wine-10 { border-color: rgba(74,14,28,0.10); }
+    .border-wine-30 { border-color: rgba(74,14,28,0.30); }
+    .border-brand { border-color: var(--magenta); }
   </style>
 </head>
 <body class="antialiased">
-  <header class="sticky top-0 z-50 border-b border-[#4A0E1C]/10 bg-[#FDFBF7]/85 backdrop-blur-md">
+  <header class="sticky top-0 z-50 border-b border-wine-10 bg-shell-85 backdrop-blur-md">
     <nav class="max-w-6xl mx-auto px-5 py-4 flex items-center justify-between gap-4">
       <a href="#top" class="text-2xl md:text-3xl leading-none">
-        <span style="color:#4A0E1C;">HOME</span><span style="color:#D83B7D;">olka</span>
+        <span class="text-wine">HOME</span><span class="text-brand">olka</span>
       </a>
 
       <ul class="hidden md:flex items-center gap-6 text-sm">
-        <li><a href="#about" class="hover:text-[#D83B7D] transition">O nás</a></li>
-        <li><a href="#offer" class="hover:text-[#D83B7D] transition">Nabídka</a></li>
-        <li><a href="#instagram" class="hover:text-[#D83B7D] transition">Instagram</a></li>
-        <li><a href="#kontakt" class="hover:text-[#D83B7D] transition">Kontakt</a></li>
+        <li><a href="#about" class="hover-text-brand transition">O nás</a></li>
+        <li><a href="#offer" class="hover-text-brand transition">Nabídka</a></li>
+        <li><a href="#instagram" class="hover-text-brand transition">Instagram</a></li>
+        <li><a href="#kontakt" class="hover-text-brand transition">Kontakt</a></li>
       </ul>
 
-      <a href="#kontakt" class="text-xs md:text-sm px-4 py-2 rounded-full text-white" style="background:#D83B7D;">Kde nás najdete?</a>
+      <a href="#kontakt" class="text-xs md:text-sm px-4 py-2 rounded-full text-white bg-brand">Kde nás najdete?</a>
     </nav>
   </header>
 
@@ -70,9 +90,9 @@
     </div>
 
     <div class="text-center mt-8 md:mt-10 space-y-4">
-      <h1 id="heroTitle" class="text-6xl md:text-8xl leading-none text-[#4A0E1C]">homeolka</h1>
+      <h1 id="heroTitle" class="text-6xl md:text-8xl leading-none text-wine">homeolka</h1>
       <p id="heroSub" class="text-base md:text-lg font-light max-w-2xl mx-auto">Stříbrný přívěs, výběrová káva a pohoda u parku.</p>
-      <a id="heroCTA" href="#kontakt" class="inline-block mt-2 px-7 py-3 rounded-full text-white text-sm md:text-base soft-shadow" style="background:#D83B7D;">Kde nás najdete?</a>
+      <a id="heroCTA" href="#kontakt" class="inline-block mt-2 px-7 py-3 rounded-full text-white text-sm md:text-base soft-shadow bg-brand">Kde nás najdete?</a>
     </div>
   </section>
 
@@ -86,7 +106,7 @@
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
       <article class="glass rounded-2xl p-7 text-center soft-shadow">
-        <div class="mx-auto w-12 h-12 mb-4 text-[#D83B7D]">
+        <div class="mx-auto w-12 h-12 mb-4 text-brand">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="w-full h-full">
             <path d="M4 10h12v5a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4v-5Z"/>
             <path d="M16 11h2a2.5 2.5 0 1 1 0 5h-2"/>
@@ -95,11 +115,11 @@
           </svg>
         </div>
         <h3 id="offer1Title" class="text-3xl mb-2">Káva &amp; Pohoda</h3>
-        <p id="offer1Text" class="font-light text-sm leading-relaxed text-[#4A0E1C]/85">Výběrová káva připravovaná s důrazem na chuť i detail. Ranní espresso, odpolední cappuccino a klidná atmosféra navíc.</p>
+        <p id="offer1Text" class="font-light text-sm leading-relaxed text-wine-85">Výběrová káva připravovaná s důrazem na chuť i detail. Ranní espresso, odpolední cappuccino a klidná atmosféra navíc.</p>
       </article>
 
       <article class="glass rounded-2xl p-7 text-center soft-shadow">
-        <div class="mx-auto w-12 h-12 mb-4 text-[#D83B7D]">
+        <div class="mx-auto w-12 h-12 mb-4 text-brand">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="w-full h-full">
             <path d="M3 13c1-3 4-5 9-5s8 2 9 5"/>
             <path d="M3 16h18"/>
@@ -107,11 +127,11 @@
           </svg>
         </div>
         <h3 id="offer2Title" class="text-3xl mb-2">Něco k snědku</h3>
-        <p id="offer2Text" class="font-light text-sm leading-relaxed text-[#4A0E1C]/85">Poctivý párek v rohlíku, drobné snacky a rychlé dobroty na cestu. Jednoduché, čerstvé a přesně to, na co máte chuť.</p>
+        <p id="offer2Text" class="font-light text-sm leading-relaxed text-wine-85">Poctivý párek v rohlíku, drobné snacky a rychlé dobroty na cestu. Jednoduché, čerstvé a přesně to, na co máte chuť.</p>
       </article>
 
       <article class="glass rounded-2xl p-7 text-center soft-shadow">
-        <div class="mx-auto w-12 h-12 mb-4 text-[#D83B7D]">
+        <div class="mx-auto w-12 h-12 mb-4 text-brand">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="w-full h-full">
             <path d="M4 5h16l-8 8-8-8Z"/>
             <path d="M12 13v6"/>
@@ -120,7 +140,7 @@
           </svg>
         </div>
         <h3 id="offer3Title" class="text-3xl mb-2">Drink Point</h3>
-        <p id="offer3Text" class="font-light text-sm leading-relaxed text-[#4A0E1C]/85">Lehké signature drinky, osvěžující limonády i večerní koktejly. Ideální tečka po dni u parku nebo při západu slunce.</p>
+        <p id="offer3Text" class="font-light text-sm leading-relaxed text-wine-85">Lehké signature drinky, osvěžující limonády i večerní koktejly. Ideální tečka po dni u parku nebo při západu slunce.</p>
       </article>
     </div>
   </section>
@@ -129,8 +149,8 @@
     <div class="text-center space-y-4">
       <h2 id="hoursTitle" class="text-4xl md:text-5xl">Kdy se potkáme?</h2>
       <p id="hoursText" class="font-light md:text-lg">Naše otevíračka se řídí počasím a náladou v parku.</p>
-      <p id="hoursSub" class="font-light text-sm md:text-base text-[#4A0E1C]/80">Standardně: Út – Ne | 10:00 – 20:00. Když prší nebo mrzne, ladíme receptury uvnitř přívěsu.</p>
-      <a id="hoursCTA" href="https://www.instagram.com/homeolka" target="_blank" rel="noreferrer" class="inline-block mt-2 px-6 py-3 rounded-full border border-[#D83B7D] text-[#D83B7D] text-sm md:text-base hover:bg-[#D83B7D]/5 transition">Sledujte aktuální Stories na Instagramu</a>
+      <p id="hoursSub" class="font-light text-sm md:text-base text-wine-80">Standardně: Út – Ne | 10:00 – 20:00. Když prší nebo mrzne, ladíme receptury uvnitř přívěsu.</p>
+      <a id="hoursCTA" href="https://www.instagram.com/homeolka" target="_blank" rel="noreferrer" class="inline-block mt-2 px-6 py-3 rounded-full border border-brand text-brand text-sm md:text-base hover-bg-brand-soft transition">Sledujte aktuální Stories na Instagramu</a>
     </div>
   </section>
 
@@ -139,7 +159,7 @@
       <h2 id="eventsTitle" class="text-4xl md:text-5xl">Chcete nás u sebe?</h2>
       <p id="eventsText" class="font-light leading-relaxed md:text-lg">Líbilo se vám u nás v parku a plánujete svatbu, oslavu nebo firemní teambuilding? Rádi zapřáhneme náš stříbrný sen a přijedeme za vámi. Přivezeme kávu, drinky i tu správnou atmosféru.</p>
       <p class="md:text-lg">
-        <a id="eventsContact" href="mailto:info@homeolka.cz" class="underline underline-offset-4 hover:text-[#D83B7D] transition">Napište nám na info@homeolka.cz a vymyslíme to společně.</a>
+        <a id="eventsContact" href="mailto:info@homeolka.cz" class="underline underline-offset-4 hover-text-brand transition">Napište nám na info@homeolka.cz a vymyslíme to společně.</a>
       </p>
     </div>
   </section>
@@ -147,25 +167,25 @@
   <section id="instagram" class="max-w-6xl mx-auto px-5 py-14 md:py-20">
     <h2 id="instaTitle" class="text-4xl md:text-5xl text-center mb-8 md:mb-10">Sledujte naši jízdu na @homeolka</h2>
     <div id="instagramGrid" class="grid grid-cols-3 gap-3 md:gap-4"></div>
-    <p class="text-center text-xs md:text-sm mt-4 text-[#4A0E1C]/70">Statická galerie z reálného Instagram obsahu, průběžně doplňovaná ručně.</p>
+    <p class="text-center text-xs md:text-sm mt-4 text-wine-70">Statická galerie z reálného Instagram obsahu, průběžně doplňovaná ručně.</p>
   </section>
 
-  <footer id="kontakt" class="mt-6 pt-10 pb-12 border-t border-[#4A0E1C]/10">
+  <footer id="kontakt" class="mt-6 pt-10 pb-12 border-t border-wine-10">
     <div class="max-w-6xl mx-auto px-5 space-y-8">
-      <div id="mapContainer" class="w-full rounded-2xl overflow-hidden soft-shadow border border-[#4A0E1C]/10 bg-gray-100 h-56 md:h-80 flex items-center justify-center">
+      <div id="mapContainer" class="w-full rounded-2xl overflow-hidden soft-shadow border border-wine-10 bg-gray-100 h-56 md:h-80 flex items-center justify-center">
         <div class="text-center px-6">
           <p class="font-light mb-3">Mapa je externí obsah od Google. Načteme ji až po vašem kliknutí.</p>
-          <button type="button" onclick="loadMap()" class="px-5 py-2 rounded-full border border-[#D83B7D] text-[#D83B7D] text-sm hover:bg-[#D83B7D]/5 transition">Načíst mapu</button>
+          <button type="button" onclick="loadMap()" class="px-5 py-2 rounded-full border border-brand text-brand text-sm hover-bg-brand-soft transition">Načíst mapu</button>
         </div>
       </div>
 
       <div class="text-center space-y-3">
-        <p class="text-lg"><a id="emailLink" href="mailto:info@homeolka.cz" class="hover:text-[#D83B7D] transition">info@homeolka.cz</a></p>
+        <p class="text-lg"><a id="emailLink" href="mailto:info@homeolka.cz" class="hover-text-brand transition">info@homeolka.cz</a></p>
         <p id="footerNote" class="text-sm font-light opacity-80">Když svítí sluníčko, jsme tu pro vás.</p>
         <div class="flex justify-center items-center gap-5 text-sm pt-2">
-          <a href="https://www.instagram.com/homeolka" target="_blank" rel="noreferrer" class="hover:text-[#D83B7D] transition">Instagram</a>
+          <a href="https://www.instagram.com/homeolka" target="_blank" rel="noreferrer" class="hover-text-brand transition">Instagram</a>
           <span class="opacity-30">•</span>
-          <a href="https://www.facebook.com/HOMEolka" target="_blank" rel="noreferrer" class="hover:text-[#D83B7D] transition">Facebook</a>
+          <a href="https://www.facebook.com/HOMEolka" target="_blank" rel="noreferrer" class="hover-text-brand transition">Facebook</a>
         </div>
         <div class="pt-1">
           <button type="button" onclick="openCookieSettings()" class="text-xs underline underline-offset-2 opacity-70 hover:opacity-100 transition">Nastavení soukromí</button>
@@ -179,8 +199,8 @@
       <p class="text-sm md:text-base">Používáme pouze nezbytné cookies a volitelnou analytiku (GA4) pro zlepšování webu.</p>
       <p class="text-xs opacity-80 mt-1">Volbu můžete kdykoli změnit v odkazu „Nastavení soukromí" ve footeru. Více v dokumentech: <a href="/zasady-cookies.pdf" target="_blank" rel="noreferrer" class="underline">Zásady cookies</a> a <a href="/zasady-ochrany-osobnich-udaju.pdf" target="_blank" rel="noreferrer" class="underline">Ochrana osobních údajů</a>.</p>
       <div class="mt-3 flex flex-col sm:flex-row gap-2 sm:justify-end">
-        <button type="button" onclick="rejectAll()" class="px-4 py-2 rounded-full border border-[#4A0E1C]/30 text-sm">Odmítnout vše</button>
-        <button type="button" onclick="acceptAll()" class="px-4 py-2 rounded-full text-white text-sm" style="background:#D83B7D;">Přijmout vše</button>
+        <button type="button" onclick="rejectAll()" class="px-4 py-2 rounded-full border border-wine-30 text-sm">Odmítnout vše</button>
+        <button type="button" onclick="acceptAll()" class="px-4 py-2 rounded-full text-white text-sm bg-brand">Přijmout vše</button>
       </div>
     </div>
   </div>
