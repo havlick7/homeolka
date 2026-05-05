@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 120" role="img" aria-labelledby="title desc">
+  <title id="title">HOMEolka logo</title>
+  <desc id="desc">HOME text in wine and olka text in magenta.</desc>
+  <rect width="560" height="120" fill="none"/>
+  <text x="0" y="85" font-family="Montserrat, Arial, sans-serif" font-size="78" font-weight="700" fill="#4A0E1C">HOME</text>
+  <text x="255" y="85" font-family="Montserrat, Arial, sans-serif" font-size="78" font-weight="400" fill="#D83B7D">olka</text>
+</svg>
