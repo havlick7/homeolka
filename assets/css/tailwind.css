@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Montserrat:wght@300;400&display=swap');
-
 :root{
   --bg: #FDFBF7;
   --wine: #4A0E1C;
@@ -16,7 +14,7 @@ body{
   background: radial-gradient(circle at 10% 0%, #fff 0%, #FDFBF7 45%, #FBF7F2 100%);
   color: var(--wine);
 }
-h1,h2,h3 { font-family: 'Dancing Script', cursive; }
+h1,h2,h3 { font-family: 'Dancing Script', 'Brush Script MT', cursive; }
 
 .glass{
   background: rgba(255,255,255,0.55);
