@@ -26,74 +26,35 @@
 
     gtag('js', new Date());
   </script>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Montserrat:wght@300;400&display=swap');
-
-    :root{
-      --bg: #FDFBF7;
-      --wine: #4A0E1C;
-      --magenta: #FF585D;
-    }
-
-    html { scroll-behavior: smooth; }
-    body{
-      font-family: 'Montserrat', sans-serif;
-      background: radial-gradient(circle at 10% 0%, #fff 0%, #FDFBF7 45%, #FBF7F2 100%);
-      color: var(--wine);
-    }
-    h1,h2,h3 { font-family: 'Dancing Script', cursive; }
-
-    .glass{
-      background: rgba(255,255,255,0.55);
-      backdrop-filter: blur(6px);
-      border: 1px solid rgba(74,14,28,0.08);
-    }
-
-    .soft-shadow{ box-shadow: 0 8px 30px rgba(74,14,28,0.08); }
-
-    .text-wine { color: var(--wine); }
-    .text-brand { color: var(--magenta); }
-    .text-wine-85 { color: rgba(74,14,28,0.85); }
-    .text-wine-80 { color: rgba(74,14,28,0.80); }
-    .text-wine-70 { color: rgba(74,14,28,0.70); }
-    .hover-text-brand:hover { color: var(--magenta); }
-
-    .bg-brand { background: var(--magenta); }
-    .bg-shell-85 { background: rgba(253,251,247,0.85); }
-    .hover-bg-brand-soft:hover { background: rgba(255,88,93,0.05); }
-
-    .border-wine-10 { border-color: rgba(74,14,28,0.10); }
-    .border-wine-30 { border-color: rgba(74,14,28,0.30); }
-    .border-brand { border-color: var(--magenta); }
-  </style>
 </head>
 <body class="antialiased">
-  <header class="sticky top-0 z-50 border-b border-wine-10 bg-shell-85 backdrop-blur-md">
+  <header class="header sticky top-0 z-50">
     <nav class="max-w-6xl mx-auto px-5 py-4 flex items-center justify-between gap-4">
-      <a href="#top" class="text-2xl md:text-3xl leading-none">
-        <span class="text-wine">HOME</span><span class="text-brand">olka</span>
+      <a href="#top" class="block" aria-label="HOMEolka">
+        <img src="assets/homeolka_logo_rgb_tight.svg" alt="HOMEolka" class="h-8 md:h-9 w-auto" />
       </a>
 
       <ul class="hidden md:flex items-center gap-6 text-sm">
-        <li><a href="#about" class="hover-text-brand transition">O nás</a></li>
-        <li><a href="#offer" class="hover-text-brand transition">Nabídka</a></li>
-        <li><a href="#instagram" class="hover-text-brand transition">Instagram</a></li>
-        <li><a href="#kontakt" class="hover-text-brand transition">Kontakt</a></li>
+        <li><a href="#about" class="nav-link transition">O nás</a></li>
+        <li><a href="#offer" class="nav-link transition">Nabídka</a></li>
+        <li><a href="#instagram" class="nav-link transition">Instagram</a></li>
+        <li><a href="#kontakt" class="nav-link transition">Kontakt</a></li>
       </ul>
 
-      <a href="#kontakt" class="text-xs md:text-sm px-4 py-2 rounded-full text-white bg-brand">Kde nás najdete?</a>
+      <a href="#kontakt" class="btn btn-primary text-xs md:text-sm">Kde nás najdete?</a>
     </nav>
   </header>
 
   <section id="top" class="max-w-6xl mx-auto px-5 pt-8 md:pt-12 pb-16 md:pb-20">
-    <div class="rounded-2xl overflow-hidden bg-gray-200 h-52 md:h-72 lg:h-80 flex items-center justify-center soft-shadow">
+    <div class="hero-image bg-gray-200 h-52 md:h-72 lg:h-80 flex items-center justify-center">
       <span class="text-gray-500 text-sm">[ Placeholder: Silver Airstream trailer image ]</span>
     </div>
 
     <div class="text-center mt-8 md:mt-10 space-y-4">
-      <h1 id="heroTitle" class="text-6xl md:text-8xl leading-none text-wine">homeolka</h1>
+      <p class="hero-eyebrow">Airstream drink point</p>
+      <h1 id="heroTitle" class="text-6xl md:text-8xl">homeolka</h1>
       <p id="heroSub" class="text-base md:text-lg font-light max-w-2xl mx-auto">Stříbrný přívěs, výběrová káva a pohoda u parku.</p>
-      <a id="heroCTA" href="#kontakt" class="inline-block mt-2 px-7 py-3 rounded-full text-white text-sm md:text-base soft-shadow bg-brand">Kde nás najdete?</a>
+      <a id="heroCTA" href="#kontakt" class="btn btn-primary mt-2 text-sm md:text-base">Kde nás najdete?</a>
     </div>
   </section>
 
@@ -151,7 +112,7 @@
       <h2 id="hoursTitle" class="text-4xl md:text-5xl">Kdy se potkáme?</h2>
       <p id="hoursText" class="font-light md:text-lg">Naše otevíračka se řídí počasím a náladou v parku.</p>
       <p id="hoursSub" class="font-light text-sm md:text-base text-wine-80">Standardně: Út – Ne | 10:00 – 20:00. Když prší nebo mrzne, ladíme receptury uvnitř přívěsu.</p>
-      <a id="hoursCTA" href="https://www.instagram.com/homeolka" target="_blank" rel="noreferrer" class="inline-block mt-2 px-6 py-3 rounded-full border border-brand text-brand text-sm md:text-base hover-bg-brand-soft transition">Sledujte aktuální Stories na Instagramu</a>
+      <a id="hoursCTA" href="https://www.instagram.com/homeolka" target="_blank" rel="noreferrer" class="btn btn-outline mt-2 text-sm md:text-base">Sledujte aktuální Stories na Instagramu</a>
     </div>
   </section>
 
@@ -176,17 +137,17 @@
       <div id="mapContainer" class="w-full rounded-2xl overflow-hidden soft-shadow border border-wine-10 bg-gray-100 h-56 md:h-80 flex items-center justify-center">
         <div class="text-center px-6">
           <p class="font-light mb-3">Mapa je externí obsah od Google. Načteme ji až po vašem kliknutí.</p>
-          <button type="button" onclick="loadMap()" class="px-5 py-2 rounded-full border border-brand text-brand text-sm hover-bg-brand-soft transition">Načíst mapu</button>
+          <button type="button" onclick="loadMap()" class="btn btn-outline text-sm">Načíst mapu</button>
         </div>
       </div>
 
       <div class="text-center space-y-3">
-        <p class="text-lg"><a id="emailLink" href="mailto:info@homeolka.cz" class="hover-text-brand transition">info@homeolka.cz</a></p>
+        <p class="text-lg"><a id="emailLink" href="mailto:info@homeolka.cz" class="nav-link transition">info@homeolka.cz</a></p>
         <p id="footerNote" class="text-sm font-light opacity-80">Když svítí sluníčko, jsme tu pro vás.</p>
         <div class="flex justify-center items-center gap-5 text-sm pt-2">
-          <a href="https://www.instagram.com/homeolka" target="_blank" rel="noreferrer" class="hover-text-brand transition">Instagram</a>
+          <a href="https://www.instagram.com/homeolka" target="_blank" rel="noreferrer" class="nav-link transition">Instagram</a>
           <span class="opacity-30">•</span>
-          <a href="https://www.facebook.com/HOMEolka" target="_blank" rel="noreferrer" class="hover-text-brand transition">Facebook</a>
+          <a href="https://www.facebook.com/HOMEolka" target="_blank" rel="noreferrer" class="nav-link transition">Facebook</a>
         </div>
         <div class="pt-1">
           <button type="button" onclick="openCookieSettings()" class="text-xs underline underline-offset-2 opacity-70 hover:opacity-100 transition">Nastavení soukromí</button>
@@ -200,216 +161,12 @@
       <p class="text-sm md:text-base">Používáme pouze nezbytné cookies a volitelnou analytiku (GA4) pro zlepšování webu.</p>
       <p class="text-xs opacity-80 mt-1">Volbu můžete kdykoli změnit v odkazu „Nastavení soukromí" ve footeru. Více v dokumentech: <a href="/zasady-cookies.pdf" target="_blank" rel="noreferrer" class="underline">Zásady cookies</a> a <a href="/zasady-ochrany-osobnich-udaju.pdf" target="_blank" rel="noreferrer" class="underline">Ochrana osobních údajů</a>.</p>
       <div class="mt-3 flex flex-col sm:flex-row gap-2 sm:justify-end">
-        <button type="button" onclick="rejectAll()" class="px-4 py-2 rounded-full border border-wine-30 text-sm">Odmítnout vše</button>
-        <button type="button" onclick="acceptAll()" class="px-4 py-2 rounded-full text-white text-sm bg-brand">Přijmout vše</button>
+        <button type="button" onclick="rejectAll()" class="btn btn-outline text-sm">Odmítnout vše</button>
+        <button type="button" onclick="acceptAll()" class="btn btn-coral text-sm">Přijmout vše</button>
       </div>
     </div>
   </div>
 
-  <script>
-    const GA_MEASUREMENT_ID = 'G-9SHFK2QYSL';
-    const CONSENT_STORAGE_KEY = 'homeolka_cookie_consent_v1';
-    const MAP_CONSENT_STORAGE_KEY = 'homeolka_map_consent_v1';
-    const CONSENT_MAX_AGE_DAYS = 180;
-    let gaConfigured = false;
-
-    function showCookieBanner() {
-      const banner = document.getElementById('cookieBanner');
-      if (banner) banner.classList.remove('hidden');
-    }
-
-    function hideCookieBanner() {
-      const banner = document.getElementById('cookieBanner');
-      if (banner) banner.classList.add('hidden');
-    }
-
-    function saveConsent(status) {
-      const payload = {
-        status,
-        ts: Date.now()
-      };
-      localStorage.setItem(CONSENT_STORAGE_KEY, JSON.stringify(payload));
-    }
-
-    function readConsent() {
-      try {
-        const raw = localStorage.getItem(CONSENT_STORAGE_KEY);
-        if (!raw) return null;
-        const parsed = JSON.parse(raw);
-        if (!parsed?.status || !parsed?.ts) return null;
-
-        const maxAgeMs = CONSENT_MAX_AGE_DAYS * 24 * 60 * 60 * 1000;
-        if (Date.now() - parsed.ts > maxAgeMs) {
-          localStorage.removeItem(CONSENT_STORAGE_KEY);
-          return null;
-        }
-
-        return parsed.status;
-      } catch (error) {
-        console.error('Nepodařilo se přečíst cookie consent stav:', error);
-        return null;
-      }
-    }
-
-    function saveMapConsent() {
-      const payload = { granted: true, ts: Date.now() };
-      localStorage.setItem(MAP_CONSENT_STORAGE_KEY, JSON.stringify(payload));
-    }
-
-    function readMapConsent() {
-      try {
-        const raw = localStorage.getItem(MAP_CONSENT_STORAGE_KEY);
-        if (!raw) return false;
-        const parsed = JSON.parse(raw);
-        if (!parsed?.granted || !parsed?.ts) return false;
-
-        const maxAgeMs = CONSENT_MAX_AGE_DAYS * 24 * 60 * 60 * 1000;
-        if (Date.now() - parsed.ts > maxAgeMs) {
-          localStorage.removeItem(MAP_CONSENT_STORAGE_KEY);
-          return false;
-        }
-
-        return true;
-      } catch (error) {
-        console.error('Nepodařilo se přečíst map consent stav:', error);
-        return false;
-      }
-    }
-
-    function clearMapConsent() {
-      localStorage.removeItem(MAP_CONSENT_STORAGE_KEY);
-    }
-
-    function applyConsent(status) {
-      const granted = status === 'accepted';
-
-      gtag('consent', 'update', {
-        analytics_storage: granted ? 'granted' : 'denied',
-        ad_storage: 'denied',
-        ad_user_data: 'denied',
-        ad_personalization: 'denied'
-      });
-
-      if (granted && !gaConfigured) {
-        gtag('config', GA_MEASUREMENT_ID);
-        gaConfigured = true;
-      }
-    }
-
-    function acceptAll() {
-      saveConsent('accepted');
-      applyConsent('accepted');
-      hideCookieBanner();
-    }
-
-    function rejectAll() {
-      saveConsent('rejected');
-      clearMapConsent();
-      applyConsent('rejected');
-      hideCookieBanner();
-    }
-
-    function openCookieSettings() {
-      showCookieBanner();
-    }
-
-    function initConsent() {
-      const consent = readConsent();
-      if (!consent) {
-        showCookieBanner();
-        return;
-      }
-
-      applyConsent(consent);
-      hideCookieBanner();
-    }
-
-    function loadMap(persistConsent = true) {
-      const mapContainer = document.getElementById('mapContainer');
-      if (!mapContainer) return;
-
-      if (persistConsent) {
-        saveMapConsent();
-      }
-
-      mapContainer.innerHTML = `
-        <iframe
-          title="Mapa: homeolka"
-          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d620.5692139335355!2d14.052242431463364!3d49.961528049553834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1scs!2scz!4v1774994601966!5m2!1scs!2scz"
-          class="w-full h-56 md:h-80"
-          style="border:0;"
-          loading="lazy"
-          allowfullscreen
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-      `;
-    }
-
-    function renderInstagramFallback(count = 3) {
-      const grid = document.getElementById('instagramGrid');
-      if (!grid) return;
-      grid.innerHTML = Array.from({ length: count }).map(() => `
-        <div class="aspect-square rounded-xl bg-gray-200 flex items-center justify-center text-gray-500 soft-shadow" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" class="w-7 h-7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
-        </div>
-      `).join('');
-    }
-
-    async function loadContent() {
-      try {
-        const response = await fetch('./site-content.json', { cache: 'no-store' });
-        if (!response.ok) throw new Error(`HTTP ${response.status}`);
-        const content = await response.json();
-        Object.keys(content).forEach((id) => {
-          const el = document.getElementById(id);
-          if (el) el.textContent = content[id];
-        });
-      } catch (error) {
-        console.error('Nepodařilo se načíst obsah ze site-content.json:', error);
-      }
-    }
-
-    async function loadInstagramFeed() {
-      const grid = document.getElementById('instagramGrid');
-      if (!grid) return;
-
-      try {
-        const response = await fetch('./assets/instagram/instagram-feed.json', { cache: 'no-store' });
-        if (!response.ok) throw new Error(`HTTP ${response.status}`);
-
-        const items = await response.json();
-        const visibleItems = (Array.isArray(items) ? items : [])
-          .filter((item) => item && item.src)
-          .slice(0, 6);
-
-        if (visibleItems.length === 0) {
-          renderInstagramFallback(3);
-          return;
-        }
-
-        grid.innerHTML = visibleItems.map((item) => `
-          <a href="${item.link || 'https://instagram.com/homeolka'}" target="_blank" rel="noreferrer" class="group block rounded-xl overflow-hidden soft-shadow bg-gray-200">
-            <div class="aspect-square relative">
-              <img src="${item.src}" alt="${item.alt || 'Instagram fotka'}" loading="lazy" class="w-full h-full object-cover transition duration-300 group-hover:scale-[1.02]" onerror="this.closest('a').remove();" />
-            </div>
-          </a>
-        `).join('');
-
-        if (!grid.children.length) {
-          renderInstagramFallback(3);
-        }
-      } catch (error) {
-        console.error('Nepodařilo se načíst assets/instagram/instagram-feed.json:', error);
-        renderInstagramFallback(3);
-      }
-    }
-
-    initConsent();
-    if (readMapConsent()) {
-      loadMap(false);
-    }
-    loadContent();
-    loadInstagramFeed();
-  </script>
+  <script src="assets/js/main.js" defer></script>
 </body>
 </html>
