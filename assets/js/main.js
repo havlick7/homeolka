@@ -3,6 +3,31 @@
     const MAP_CONSENT_STORAGE_KEY = 'homeolka_map_consent_v1';
     const CONSENT_MAX_AGE_DAYS = 180;
     let gaConfigured = false;
+    const DEFAULT_INSTAGRAM_LINK = 'https://instagram.com/homeolka';
+    const MAP_IFRAME_HTML = `
+        <iframe
+          title="Mapa: homeolka"
+          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d620.5692139335355!2d14.052242431463364!3d49.961528049553834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1scs!2scz!4v1774994601966!5m2!1scs!2scz"
+          class="w-full h-56 md:h-80"
+          style="border:0;"
+          loading="lazy"
+          allowfullscreen
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      `;
+
+    function getConsentMaxAgeMs() {
+      return CONSENT_MAX_AGE_DAYS * 24 * 60 * 60 * 1000;
+    }
+
+    function readStoredJson(key) {
+      try {
+        const raw = localStorage.getItem(key);
+        return raw ? JSON.parse(raw) : null;
+      } catch (error) {
+        return null;
+      }
+    }
 
     function showCookieBanner() {
       const banner = document.getElementById('cookieBanner');
@@ -24,12 +49,10 @@
 
     function readConsent() {
       try {
-        const raw = localStorage.getItem(CONSENT_STORAGE_KEY);
-        if (!raw) return null;
-        const parsed = JSON.parse(raw);
+        const parsed = readStoredJson(CONSENT_STORAGE_KEY);
         if (!parsed?.status || !parsed?.ts) return null;
 
-        const maxAgeMs = CONSENT_MAX_AGE_DAYS * 24 * 60 * 60 * 1000;
+        const maxAgeMs = getConsentMaxAgeMs();
         if (Date.now() - parsed.ts > maxAgeMs) {
           localStorage.removeItem(CONSENT_STORAGE_KEY);
           return null;
@@ -49,12 +72,10 @@
 
     function readMapConsent() {
       try {
-        const raw = localStorage.getItem(MAP_CONSENT_STORAGE_KEY);
-        if (!raw) return false;
-        const parsed = JSON.parse(raw);
+        const parsed = readStoredJson(MAP_CONSENT_STORAGE_KEY);
         if (!parsed?.granted || !parsed?.ts) return false;
 
-        const maxAgeMs = CONSENT_MAX_AGE_DAYS * 24 * 60 * 60 * 1000;
+        const maxAgeMs = getConsentMaxAgeMs();
         if (Date.now() - parsed.ts > maxAgeMs) {
           localStorage.removeItem(MAP_CONSENT_STORAGE_KEY);
           return false;
@@ -123,17 +144,7 @@
         saveMapConsent();
       }
 
-      mapContainer.innerHTML = `
-        <iframe
-          title="Mapa: homeolka"
-          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d620.5692139335355!2d14.052242431463364!3d49.961528049553834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1scs!2scz!4v1774994601966!5m2!1scs!2scz"
-          class="w-full h-56 md:h-80"
-          style="border:0;"
-          loading="lazy"
-          allowfullscreen
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-      `;
+      mapContainer.innerHTML = MAP_IFRAME_HTML;
     }
 
     function renderInstagramFallback(count = 3) {
@@ -179,7 +190,7 @@
         }
 
         grid.innerHTML = visibleItems.map((item) => `
-          <a href="${item.link || 'https://instagram.com/homeolka'}" target="_blank" rel="noreferrer" class="group block rounded-xl overflow-hidden soft-shadow bg-gray-200">
+          <a href="${item.link || DEFAULT_INSTAGRAM_LINK}" target="_blank" rel="noreferrer" class="group block rounded-xl overflow-hidden soft-shadow bg-gray-200">
             <div class="aspect-square relative">
               <img src="${item.src}" alt="${item.alt || 'Instagram fotka'}" loading="lazy" class="w-full h-full object-cover transition duration-300 group-hover:scale-[1.02]" onerror="this.closest('a').remove();" />
             </div>
@@ -195,9 +206,26 @@
       }
     }
 
-    initConsent();
-    if (readMapConsent()) {
-      loadMap(false);
+
+    function bindUIActions() {
+      document.getElementById('loadMapBtn')?.addEventListener('click', () => loadMap());
+      document.getElementById('openCookieSettingsBtn')?.addEventListener('click', openCookieSettings);
+      document.getElementById('rejectAllBtn')?.addEventListener('click', rejectAll);
+      document.getElementById('acceptAllBtn')?.addEventListener('click', acceptAll);
     }
-    loadContent();
-    loadInstagramFeed();
+
+    function initApp() {
+      bindUIActions();
+      initConsent();
+      if (readMapConsent()) {
+        loadMap(false);
+      }
+      loadContent();
+      loadInstagramFeed();
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initApp);
+    } else {
+      initApp();
+    }

@@ -4,7 +4,8 @@
   "version": "1.0.0",
   "scripts": {
     "build:css": "tailwindcss -c ./tailwind.config.js -i ./assets/css/tailwind.css -o ./assets/css/main.css --minify",
-    "watch:css": "tailwindcss -c ./tailwind.config.js -i ./assets/css/tailwind.css -o ./assets/css/main.css --watch"
+    "watch:css": "tailwindcss -c ./tailwind.config.js -i ./assets/css/tailwind.css -o ./assets/css/main.css --watch",
+    "check:js": "node --check assets/js/main.js"
   },
   "devDependencies": {
     "tailwindcss": "^3.4.17"
