@@ -77,3 +77,12 @@ p { color: var(--color-muted); line-height: 1.7; }
 .micro-platform { color: #111111; stroke: currentColor; }
 .divider { display: flex; align-items: center; gap: 14px; color: var(--color-burgundy); }
 .divider::before,.divider::after { content: ""; width: 56px; height: 1px; background: rgba(90, 31, 43, 0.32); }
+
+
+/* compatibility utilities for existing markup */
+.text-wine-85{color:rgba(43,26,29,.85)}
+.text-wine-80{color:rgba(43,26,29,.8)}
+.text-wine-70{color:rgba(43,26,29,.7)}
+.border-wine-10{border-color:rgba(90,31,43,.1)}
+.border-wine-30{border-color:rgba(90,31,43,.3)}
+.bg-shell-85{background:rgba(255,252,248,.85)}
