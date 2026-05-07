@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="assets/css/main.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Montserrat:wght@300;400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet" />
   <link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico" />
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png" />
@@ -30,32 +30,33 @@
   </script>
 </head>
 <body class="antialiased">
-  <header class="sticky top-0 z-50 border-b border-wine-10 bg-shell-85 backdrop-blur-md">
-    <nav class="max-w-6xl mx-auto px-5 py-4 flex items-center justify-between gap-4">
+  <header class="header sticky top-0 z-50">
+    <nav class="max-w-6xl mx-auto px-5 h-full flex items-center justify-between gap-4">
       <a href="#top" class="block" aria-label="HOMEolka">
-        <img src="assets/homeolka_logo_rgb_tight.svg" alt="HOMEolka" class="h-7 md:h-8 w-auto" />
+        <img src="assets/homeolka_logo_rgb_tight.svg" alt="HOMEolka" class="h-8 md:h-9 w-auto" />
       </a>
 
       <ul class="hidden md:flex items-center gap-6 text-sm">
-        <li><a href="#about" class="hover-text-brand transition">O nás</a></li>
-        <li><a href="#offer" class="hover-text-brand transition">Nabídka</a></li>
-        <li><a href="#instagram" class="hover-text-brand transition">Instagram</a></li>
-        <li><a href="#kontakt" class="hover-text-brand transition">Kontakt</a></li>
+        <li><a href="#about" class="nav-link transition">O nás</a></li>
+        <li><a href="#offer" class="nav-link transition">Nabídka</a></li>
+        <li><a href="#instagram" class="nav-link transition">Instagram</a></li>
+        <li><a href="#kontakt" class="nav-link transition">Kontakt</a></li>
       </ul>
 
-      <a href="#kontakt" class="text-xs md:text-sm px-4 py-2 rounded-full text-white bg-brand">Kde nás najdete?</a>
+      <a href="#kontakt" class="btn btn-primary text-xs md:text-sm">Kde nás najdete?</a>
     </nav>
   </header>
 
   <section id="top" class="max-w-6xl mx-auto px-5 pt-8 md:pt-12 pb-16 md:pb-20">
-    <div class="rounded-2xl overflow-hidden bg-gray-200 h-52 md:h-72 lg:h-80 flex items-center justify-center soft-shadow">
+    <div class="hero-image bg-gray-200 h-52 md:h-72 lg:h-80 flex items-center justify-center">
       <span class="text-gray-500 text-sm">[ Placeholder: Silver Airstream trailer image ]</span>
     </div>
 
     <div class="text-center mt-8 md:mt-10 space-y-4">
-      <h1 id="heroTitle" class="text-6xl md:text-8xl leading-none text-wine">homeolka</h1>
+      <p class="hero-eyebrow">Airstream drink point</p>
+      <h1 id="heroTitle" class="text-6xl md:text-8xl">homeolka</h1>
       <p id="heroSub" class="text-base md:text-lg font-light max-w-2xl mx-auto">Stříbrný přívěs, výběrová káva a pohoda u parku.</p>
-      <a id="heroCTA" href="#kontakt" class="inline-block mt-2 px-7 py-3 rounded-full text-white text-sm md:text-base soft-shadow bg-brand">Kde nás najdete?</a>
+      <a id="heroCTA" href="#kontakt" class="btn btn-primary mt-2 text-sm md:text-base">Kde nás najdete?</a>
     </div>
   </section>
 
@@ -113,7 +114,7 @@
       <h2 id="hoursTitle" class="text-4xl md:text-5xl">Kdy se potkáme?</h2>
       <p id="hoursText" class="font-light md:text-lg">Naše otevíračka se řídí počasím a náladou v parku.</p>
       <p id="hoursSub" class="font-light text-sm md:text-base text-wine-80">Standardně: Út – Ne | 10:00 – 20:00. Když prší nebo mrzne, ladíme receptury uvnitř přívěsu.</p>
-      <a id="hoursCTA" href="https://www.instagram.com/homeolka" target="_blank" rel="noreferrer" class="inline-block mt-2 px-6 py-3 rounded-full border border-brand text-brand text-sm md:text-base hover-bg-brand-soft transition">Sledujte aktuální Stories na Instagramu</a>
+      <a id="hoursCTA" href="https://www.instagram.com/homeolka" target="_blank" rel="noreferrer" class="btn btn-outline mt-2 text-sm md:text-base">Sledujte aktuální Stories na Instagramu</a>
     </div>
   </section>
 
@@ -138,17 +139,17 @@
       <div id="mapContainer" class="w-full rounded-2xl overflow-hidden soft-shadow border border-wine-10 bg-gray-100 h-56 md:h-80 flex items-center justify-center">
         <div class="text-center px-6">
           <p class="font-light mb-3">Mapa je externí obsah od Google. Načteme ji až po vašem kliknutí.</p>
-          <button type="button" onclick="loadMap()" class="px-5 py-2 rounded-full border border-brand text-brand text-sm hover-bg-brand-soft transition">Načíst mapu</button>
+          <button type="button" onclick="loadMap()" class="btn btn-outline text-sm">Načíst mapu</button>
         </div>
       </div>
 
       <div class="text-center space-y-3">
-        <p class="text-lg"><a id="emailLink" href="mailto:info@homeolka.cz" class="hover-text-brand transition">info@homeolka.cz</a></p>
+        <p class="text-lg"><a id="emailLink" href="mailto:info@homeolka.cz" class="nav-link transition">info@homeolka.cz</a></p>
         <p id="footerNote" class="text-sm font-light opacity-80">Když svítí sluníčko, jsme tu pro vás.</p>
         <div class="flex justify-center items-center gap-5 text-sm pt-2">
-          <a href="https://www.instagram.com/homeolka" target="_blank" rel="noreferrer" class="hover-text-brand transition">Instagram</a>
+          <a href="https://www.instagram.com/homeolka" target="_blank" rel="noreferrer" class="nav-link transition">Instagram</a>
           <span class="opacity-30">•</span>
-          <a href="https://www.facebook.com/HOMEolka" target="_blank" rel="noreferrer" class="hover-text-brand transition">Facebook</a>
+          <a href="https://www.facebook.com/HOMEolka" target="_blank" rel="noreferrer" class="nav-link transition">Facebook</a>
         </div>
         <div class="pt-1">
           <button type="button" onclick="openCookieSettings()" class="text-xs underline underline-offset-2 opacity-70 hover:opacity-100 transition">Nastavení soukromí</button>
@@ -162,8 +163,8 @@
       <p class="text-sm md:text-base">Používáme pouze nezbytné cookies a volitelnou analytiku (GA4) pro zlepšování webu.</p>
       <p class="text-xs opacity-80 mt-1">Volbu můžete kdykoli změnit v odkazu „Nastavení soukromí" ve footeru. Více v dokumentech: <a href="/zasady-cookies.pdf" target="_blank" rel="noreferrer" class="underline">Zásady cookies</a> a <a href="/zasady-ochrany-osobnich-udaju.pdf" target="_blank" rel="noreferrer" class="underline">Ochrana osobních údajů</a>.</p>
       <div class="mt-3 flex flex-col sm:flex-row gap-2 sm:justify-end">
-        <button type="button" onclick="rejectAll()" class="px-4 py-2 rounded-full border border-wine-30 text-sm">Odmítnout vše</button>
-        <button type="button" onclick="acceptAll()" class="px-4 py-2 rounded-full text-white text-sm bg-brand">Přijmout vše</button>
+        <button type="button" onclick="rejectAll()" class="btn btn-outline text-sm">Odmítnout vše</button>
+        <button type="button" onclick="acceptAll()" class="btn btn-coral text-sm">Přijmout vše</button>
       </div>
     </div>
   </div>
