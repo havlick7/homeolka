@@ -3,11 +3,19 @@
   "private": true,
   "version": "1.0.0",
   "scripts": {
-    "build:css": "tailwindcss -c ./tailwind.config.js -i ./assets/css/tailwind.css -o ./assets/css/main.css --minify",
-    "watch:css": "tailwindcss -c ./tailwind.config.js -i ./assets/css/tailwind.css -o ./assets/css/main.css --watch",
-    "check:js": "node --check assets/js/main.js"
+    "build": "node scripts/build.mjs",
+    "check:site": "python3 scripts/check_site.py",
+    "build:css": "tailwindcss -c ./tailwind.config.js -i ./assets/css/tailwind.css -o ./dist/assets/css/main.css --minify",
+    "watch:css": "tailwindcss -c ./tailwind.config.js -i ./assets/css/tailwind.css -o ./dist/assets/css/main.css --watch",
+    "check:js": "node --check assets/js/main.js",
+    "test": "playwright test",
+    "import:public": "python3 scripts/import_public.py",
+    "serve": "python3 -m http.server 8000 --bind 127.0.0.1 --directory dist"
   },
   "devDependencies": {
+    "@playwright/test": "1.64.1",
+    "linkedom": "0.18.13",
+    "sharp": "0.35.5",
     "tailwindcss": "^3.4.17"
   }
 }

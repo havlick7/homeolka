@@ -1,0 +1,74 @@
+{
+  "settings": {
+    "aboutText": "Chtěli jsme vytvořit místo, kam si rádi zajdete po procházce, cvičení nebo jen tak s dětmi. Vzali jsme přívěs se stříbrným kabátem a naplnili ho tím nejlepším, co máme rádi – od skvělé kávy přes poctivý párek v rohlíku po osvěžující drinky při západu slunce.",
+    "contactEmail": "info@homeolka.cz",
+    "facebookUrl": "https://www.facebook.com/homeolka",
+    "instagramUrl": "https://www.instagram.com/homeolka",
+    "openingHours": "22. - 28. 6.\nPO - ST: 15 - 20+\nČT - PÁ: zavřeno",
+    "openingNote": "Naši otvíračku průběžně ladíme, typicky nás však najdete při hezkém počasí odpoledne na Homolce. Sledujte náš Instagram, kde zjistíte, zdali máme otevřeno, a kde nás najdete."
+  },
+  "upcomingEvents": [],
+  "pastEvents": [
+    {
+      "date": "2026-08-12",
+      "description": "Pojďte si s námi připomenout jednu z kultovních filmových klasik.",
+      "location": "Park Homolka Beroun",
+      "time": "21:00",
+      "title": "Kultovní středa 3"
+    },
+    {
+      "date": "2026-08-05",
+      "description": "Pojďte si s námi připomenout jednu z kultovních filmových klasik.",
+      "location": "Park Homolka Beroun",
+      "time": "21:00",
+      "title": "Kultovní středa 2"
+    },
+    {
+      "date": "2026-07-29",
+      "description": "Pojďte si s námi připomenout jednu z kultovních filmových klasik.",
+      "location": "Park Homolka Beroun",
+      "time": "21:00",
+      "title": "Kultovní středa"
+    },
+    {
+      "date": "2026-07-19",
+      "description": "",
+      "location": "Park Homolka Beroun",
+      "time": "21:00",
+      "title": "MS 2026 - finále"
+    },
+    {
+      "date": "2026-07-15",
+      "description": "",
+      "location": "Park Homolka Beroun ",
+      "time": "21:00",
+      "title": "MS 2026 - semifinále"
+    },
+    {
+      "date": "2026-06-11",
+      "description": "Komunitní akce nejen pro děti. Divadélko, koncert, hry a opékání.",
+      "externalLink": "./assets/media/br-UHkDMaXVIEz7dqX6T6.pdf",
+      "imageUrl": "https://www.mesto-beroun.cz/evt_image.php?img=20652",
+      "location": "Park Homolka Beroun",
+      "time": "16:00",
+      "title": "Vítání léta na Homolce"
+    }
+  ],
+  "gallery": [
+    {
+      "altText": "Výhled na park",
+      "imageUrl": "./assets/media/9bfdac52f7805a23.png",
+      "instagramUrl": "https://instagram.com/homeolka"
+    },
+    {
+      "altText": "Káva s úsměvem",
+      "imageUrl": "./assets/media/b659d23775487601.png",
+      "instagramUrl": "https://instagram.com/homeolka"
+    },
+    {
+      "altText": "Pohoda u parku",
+      "imageUrl": "./assets/media/1b6ef5fa13be14ff.png",
+      "instagramUrl": "https://instagram.com/homeolka"
+    }
+  ]
+}
