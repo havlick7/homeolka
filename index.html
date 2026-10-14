@@ -1,175 +1,1039 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="cs">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HOMEolka — stříbrný Airstream drink point</title>
-  <link rel="stylesheet" href="assets/css/main.css" />
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png" />
-  <link rel="icon" href="assets/favicon/favicon.ico" />
-  <link rel="shortcut icon" href="assets/favicon/favicon.ico" />
-  <link rel="manifest" href="assets/favicon/site.webmanifest" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <!-- Google tag (gtag.js) - načtený, ale analytika se spustí až po souhlasu -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9SHFK2QYSL"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-
-    gtag('consent', 'default', {
-      analytics_storage: 'denied',
-      ad_storage: 'denied',
-      ad_user_data: 'denied',
-      ad_personalization: 'denied'
-    });
-
-    gtag('js', new Date());
-  </script>
-</head>
-<body class="antialiased">
-  <header class="header sticky top-0 z-50">
-    <nav class="max-w-6xl mx-auto px-5 py-4 flex items-center justify-between gap-4">
-      <a href="#top" class="block" aria-label="HOMEolka">
-        <img src="assets/homeolka_logo_rgb_tight.svg" alt="HOMEolka" class="h-8 md:h-9 w-auto" />
-      </a>
-
-      <ul class="hidden md:flex items-center gap-6 text-sm">
-        <li><a href="#about" class="nav-link transition">O nás</a></li>
-        <li><a href="#offer" class="nav-link transition">Nabídka</a></li>
-        <li><a href="#instagram" class="nav-link transition">Instagram</a></li>
-        <li><a href="#kontakt" class="nav-link transition">Kontakt</a></li>
-      </ul>
-
-      <a href="#kontakt" class="btn btn-primary text-xs md:text-sm">Kde nás najdete?</a>
-    </nav>
-  </header>
-
-  <section id="top" class="max-w-6xl mx-auto px-5 pt-8 md:pt-12 pb-16 md:pb-20">
-    <div class="hero-image bg-gray-200 h-52 md:h-72 lg:h-80 flex items-center justify-center">
-      <span class="text-gray-500 text-sm">[ Placeholder: Silver Airstream trailer image ]</span>
-    </div>
-
-    <div class="text-center mt-8 md:mt-10 space-y-4">
-      <p class="hero-eyebrow">Airstream drink point</p>
-      <h1 id="heroTitle" class="text-6xl md:text-8xl">homeolka</h1>
-      <p id="heroSub" class="text-base md:text-lg font-light max-w-2xl mx-auto">Stříbrný přívěs, výběrová káva a pohoda u parku.</p>
-      <a id="heroCTA" href="#kontakt" class="btn btn-primary mt-2 text-sm md:text-base">Kde nás najdete?</a>
-    </div>
-  </section>
-
-  <section id="about" class="max-w-4xl mx-auto px-5 py-14 md:py-20">
-    <h2 id="aboutTitle" class="text-4xl md:text-5xl text-center mb-6">O nás</h2>
-    <p id="aboutText" class="text-center font-light leading-relaxed md:text-lg">Chtěli jsme vytvořit místo, kam si rádi zajdete po procházce, cvičení nebo jen tak s dětmi. Vzali jsme přívěs se stříbrným kabátem a naplnili ho tím nejlepším, co máme rádi – od výběrové kávy přes poctivý párek v rohlíku po vyladěné koktejly při západu slunce.</p>
-  </section>
-
-  <section id="offer" class="max-w-6xl mx-auto px-5 py-14 md:py-20">
-    <h2 id="offerTitle" class="text-4xl md:text-5xl text-center mb-10 md:mb-12">Co u nás najdete</h2>
-
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-      <article class="glass rounded-2xl p-7 text-center soft-shadow">
-        <div class="mx-auto w-12 h-12 mb-4 text-brand">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="w-full h-full">
-            <path d="M4 10h12v5a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4v-5Z"/>
-            <path d="M16 11h2a2.5 2.5 0 1 1 0 5h-2"/>
-            <path d="M7 4c0 1 1 1.5 1 2.5S7 8 7 9"/>
-            <path d="M11 4c0 1 1 1.5 1 2.5S11 8 11 9"/>
-          </svg>
-        </div>
-        <h3 id="offer1Title" class="text-3xl mb-2">Káva &amp; Pohoda</h3>
-        <p id="offer1Text" class="font-light text-sm leading-relaxed text-wine-85">Výběrová káva připravovaná s důrazem na chuť i detail. Ranní espresso, odpolední cappuccino a klidná atmosféra navíc.</p>
-      </article>
-
-      <article class="glass rounded-2xl p-7 text-center soft-shadow">
-        <div class="mx-auto w-12 h-12 mb-4 text-brand">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="w-full h-full">
-            <path d="M3 13c1-3 4-5 9-5s8 2 9 5"/>
-            <path d="M3 16h18"/>
-            <path d="M5 10c2-2 4-3 7-3s5 1 7 3"/>
-          </svg>
-        </div>
-        <h3 id="offer2Title" class="text-3xl mb-2">Něco k snědku</h3>
-        <p id="offer2Text" class="font-light text-sm leading-relaxed text-wine-85">Poctivý párek v rohlíku, drobné snacky a rychlé dobroty na cestu. Jednoduché, čerstvé a přesně to, na co máte chuť.</p>
-      </article>
-
-      <article class="glass rounded-2xl p-7 text-center soft-shadow">
-        <div class="mx-auto w-12 h-12 mb-4 text-brand">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="w-full h-full">
-            <path d="M4 5h16l-8 8-8-8Z"/>
-            <path d="M12 13v6"/>
-            <path d="M9 19h6"/>
-            <path d="M16.5 3.5 18 2"/>
-          </svg>
-        </div>
-        <h3 id="offer3Title" class="text-3xl mb-2">Drink Point</h3>
-        <p id="offer3Text" class="font-light text-sm leading-relaxed text-wine-85">Lehké signature drinky, osvěžující limonády i večerní koktejly. Ideální tečka po dni u parku nebo při západu slunce.</p>
-      </article>
-    </div>
-  </section>
-
-  <section id="opening-hours" class="max-w-4xl mx-auto px-5 py-14 md:py-20">
-    <div class="text-center space-y-4">
-      <h2 id="hoursTitle" class="text-4xl md:text-5xl">Kdy se potkáme?</h2>
-      <p id="hoursText" class="font-light md:text-lg">Naše otevíračka se řídí počasím a náladou v parku.</p>
-      <p id="hoursSub" class="font-light text-sm md:text-base text-wine-80">Standardně: Út – Ne | 10:00 – 20:00. Když prší nebo mrzne, ladíme receptury uvnitř přívěsu.</p>
-      <a id="hoursCTA" href="https://www.instagram.com/homeolka" target="_blank" rel="noreferrer" class="btn btn-outline mt-2 text-sm md:text-base">Sledujte aktuální Stories na Instagramu</a>
-    </div>
-  </section>
-
-  <section id="events" class="max-w-4xl mx-auto px-5 py-14 md:py-20">
-    <div class="text-center space-y-4">
-      <h2 id="eventsTitle" class="text-4xl md:text-5xl">Chcete nás u sebe?</h2>
-      <p id="eventsText" class="font-light leading-relaxed md:text-lg">Líbilo se vám u nás v parku a plánujete svatbu, oslavu nebo firemní teambuilding? Rádi zapřáhneme náš stříbrný sen a přijedeme za vámi. Přivezeme kávu, drinky i tu správnou atmosféru.</p>
-      <p class="md:text-lg">
-        <a id="eventsContact" href="mailto:info@homeolka.cz" class="underline underline-offset-4 hover-text-brand transition">Napište nám na info@homeolka.cz a vymyslíme to společně.</a>
-      </p>
-    </div>
-  </section>
-
-  <section id="instagram" class="max-w-6xl mx-auto px-5 py-14 md:py-20">
-    <h2 id="instaTitle" class="text-4xl md:text-5xl text-center mb-8 md:mb-10">Sledujte naši jízdu na @homeolka</h2>
-    <div id="instagramGrid" class="grid grid-cols-3 gap-3 md:gap-4"></div>
-    <p class="text-center text-xs md:text-sm mt-4 text-wine-70">Statická galerie z reálného Instagram obsahu, průběžně doplňovaná ručně.</p>
-  </section>
-
-  <footer id="kontakt" class="mt-6 pt-10 pb-12 border-t border-wine-10">
-    <div class="max-w-6xl mx-auto px-5 space-y-8">
-      <div id="mapContainer" class="w-full rounded-2xl overflow-hidden soft-shadow border border-wine-10 bg-gray-100 h-56 md:h-80 flex items-center justify-center">
-        <div class="text-center px-6">
-          <p class="font-light mb-3">Mapa je externí obsah od Google. Načteme ji až po vašem kliknutí.</p>
-          <button id="loadMapBtn" type="button" class="btn btn-outline text-sm">Načíst mapu</button>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>HOMEolka – káva, drinky a občerstvení nejen v Berouně</title>
+    <meta
+      name="description"
+      content="HOMEolka je stříbrný přívěs s kávou, drinky, limonádami, zmrzlinou a drobným občerstvením typicky u parku Homolka v Berouně. Aktuální otevírací dobu najdete na Instagramu."
+    />
+    <meta name="author" content="HOMEolka" />
+    <meta
+      name="keywords"
+      content="HOMEolka,Airstream,kavárna,drink point,food truck,káva,eventy,Beroun"
+    />
+    <link rel="canonical" href="https://www.homeolka.cz" />
+    <meta
+      property="og:title"
+      content="HOMEolka – káva, drinky a občerstvení nejen v Berouně"
+    />
+    <meta
+      property="og:description"
+      content="HOMEolka je stříbrný přívěs s kávou, drinky, limonádami, zmrzlinou a drobným občerstvením typicky u parku Homolka v Berouně."
+    />
+    <meta property="og:url" content="https://www.homeolka.cz" />
+    <meta property="og:site_name" content="HOMEolka" />
+    <meta property="og:locale" content="cs_CZ" />
+    <meta property="og:image" content="./assets/media/social-preview.png" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="HOMEolka – káva, drinky a občerstvení nejen v Berouně"
+    />
+    <meta
+      name="twitter:description"
+      content="HOMEolka je stříbrný přívěs s kávou, drinky, limonádami, zmrzlinou a drobným občerstvením typicky u parku Homolka v Berouně."
+    />
+    <meta name="twitter:image" content="./assets/media/social-preview.png" />
+    <link
+      rel="icon"
+      href="./assets/media/favicon.ico"
+      sizes="48x48"
+      type="image/x-icon"
+    />
+    <link rel="icon" href="./assets/media/favicon.ico" />
+    <link
+      rel="icon"
+      href="./assets/media/B-0W9FV_VkkDnexijeI3r.png"
+      sizes="16x16"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      href="./assets/media/UASc0-g2KTRgBmUaYs4LG.png"
+      sizes="32x32"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      href="./assets/media/PvXsNmluYSDtiFyz-ji5l.png"
+      sizes="192x192"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      href="./assets/media/quVplE0rqr72E-V3ORDlI.png"
+      sizes="512x512"
+      type="image/png"
+    />
+    <link rel="apple-touch-icon" href="./assets/media/apple-icon.png" />
+    <link href="./assets/css/main.css" rel="stylesheet" />
+    <script defer src="./assets/js/main.js"></script>
+    <script id="business-data" type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FoodEstablishment",
+        "name": "HOMEolka",
+        "description": "Stříbrný přívěs s kávou, drinky, limonádami, zmrzlinou a drobným občerstvením u parku Homolka v Berouně.",
+        "url": "https://www.homeolka.cz",
+        "logo": "https://assets.macaly-user-data.dev/j9w0fuhnff25vydvwib1y9p3/jbv52vg26t8exiuvcan85hx1/CeKGEK28CNJmrTaXGnDdm.svg",
+        "image": "./assets/media/social-preview.png",
+        "servesCuisine": ["Káva", "Drinky", "Snacky"],
+        "priceRange": "€",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Beroun",
+          "addressCountry": "CZ"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "email": "info@homeolka.cz",
+          "contactType": "customer service"
+        },
+        "sameAs": [
+          "https://www.instagram.com/homeolka",
+          "https://www.facebook.com/homeolka"
+        ],
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Tuesday", "Wednesday", "Thursday"],
+            "opens": "14:00",
+            "closes": "20:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Friday", "Saturday", "Sunday"],
+            "opens": "10:00",
+            "closes": "22:00"
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Přejít na obsah</a>
+    <header
+      id="site-header"
+      class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent"
+    >
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="flex items-center justify-between h-16 sm:h-18">
+          <a class="flex items-center group" href="#hero"
+            ><img
+              decoding="async"
+              src="./assets/media/logo.svg"
+              alt="HOMEolka"
+              class="h-7 w-auto transition-opacity group-hover:opacity-70"
+              style="max-width: 160px"
+          /></a>
+          <nav
+            aria-label="Hlavní navigace"
+            class="hidden md:flex items-center gap-7"
+          >
+            <a
+              class="font-body text-sm font-semibold text-foreground/70 hover:text-brand-coral transition-colors"
+              href="#o-nas"
+              >O nás</a
+            ><a
+              class="font-body text-sm font-semibold text-foreground/70 hover:text-brand-coral transition-colors"
+              href="#nabidka"
+              >Nabídka</a
+            ><a
+              class="font-body text-sm font-semibold text-foreground/70 hover:text-brand-coral transition-colors"
+              href="#akce"
+              >Akce</a
+            ><a
+              class="font-body text-sm font-semibold text-foreground/70 hover:text-brand-coral transition-colors"
+              href="#kontakt"
+              >Kontakt</a
+            >
+          </nav>
+          <div class="hidden md:flex items-center gap-3">
+            <a
+              href="https://www.facebook.com/homeolka"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+              class="p-1.5 text-foreground/60 hover:text-brand-coral transition-colors"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-facebook"
+                aria-hidden="true"
+              >
+                <path
+                  d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                /></svg></a
+            ><a
+              href="https://www.instagram.com/homeolka"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              class="p-1.5 text-foreground/60 hover:text-brand-coral transition-colors"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-instagram"
+                aria-hidden="true"
+              >
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" /></svg
+            ></a>
+          </div>
+          <button
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+            id="menu-toggle"
+            class="md:hidden p-2 rounded-lg text-brand-wine"
+            aria-label="Menu"
+          >
+            <div
+              class="w-5 h-0.5 bg-current mb-1.5 transition-all"
+              style="transform: none"
+            ></div>
+            <div
+              class="w-5 h-0.5 bg-current mb-1.5 transition-all"
+              style="opacity: 1"
+            ></div>
+            <div
+              class="w-5 h-0.5 bg-current transition-all"
+              style="transform: none"
+            ></div>
+          </button>
         </div>
       </div>
-
-      <div class="text-center space-y-3">
-        <p class="text-lg"><a id="emailLink" href="mailto:info@homeolka.cz" class="nav-link transition">info@homeolka.cz</a></p>
-        <p id="footerNote" class="text-sm font-light opacity-80">Když svítí sluníčko, jsme tu pro vás.</p>
-        <div class="flex justify-center items-center gap-5 text-sm pt-2">
-          <a href="https://www.instagram.com/homeolka" target="_blank" rel="noreferrer" class="nav-link transition">Instagram</a>
-          <span class="opacity-30">•</span>
-          <a href="https://www.facebook.com/HOMEolka" target="_blank" rel="noreferrer" class="nav-link transition">Facebook</a>
+      <nav
+        aria-label="Mobilní navigace"
+        class="md:hidden glass border-t border-border"
+        hidden
+        id="mobile-menu"
+      >
+        <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col gap-3">
+          <a
+            class="font-body text-sm font-semibold text-foreground/70 hover:text-brand-coral transition-colors py-2"
+            href="#o-nas"
+            >O nás</a
+          ><a
+            class="font-body text-sm font-semibold text-foreground/70 hover:text-brand-coral transition-colors py-2"
+            href="#nabidka"
+            >Nabídka</a
+          ><a
+            class="font-body text-sm font-semibold text-foreground/70 hover:text-brand-coral transition-colors py-2"
+            href="#akce"
+            >Akce</a
+          ><a
+            class="font-body text-sm font-semibold text-foreground/70 hover:text-brand-coral transition-colors py-2"
+            href="#kontakt"
+            >Kontakt</a
+          >
+          <div class="flex items-center gap-4 pt-2 border-t border-border mt-1">
+            <a
+              href="https://www.facebook.com/homeolka"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+              class="text-foreground/60 hover:text-brand-coral transition-colors"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-facebook"
+                aria-hidden="true"
+              >
+                <path
+                  d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                /></svg></a
+            ><a
+              href="https://www.instagram.com/homeolka"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              class="text-foreground/60 hover:text-brand-coral transition-colors"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-instagram"
+                aria-hidden="true"
+              >
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" /></svg
+            ></a>
+          </div>
         </div>
-        <div class="pt-1">
-          <button id="openCookieSettingsBtn" type="button" class="text-xs underline underline-offset-2 opacity-70 hover:opacity-100 transition">Nastavení soukromí</button>
+      </nav>
+    </header>
+    <main id="main">
+      <section
+        id="hero"
+        class="relative min-h-[85vh] lg:min-h-[75vh] flex items-center justify-center overflow-hidden"
+        style="background: hsl(var(--brand-cream))"
+      >
+        <div
+          class="absolute top-24 right-10 w-64 h-64 rounded-full opacity-20 blur-3xl pointer-events-none"
+          style="background: hsl(var(--brand-coral))"
+        ></div>
+        <div
+          class="absolute bottom-20 left-6 w-80 h-80 rounded-full opacity-10 blur-3xl pointer-events-none"
+          style="background: hsl(var(--brand-wine))"
+        ></div>
+        <div
+          class="absolute top-32 left-8 md:left-20 animate-float pointer-events-none select-none"
+          style="opacity: 0.22"
+        >
+          <img
+            decoding="async"
+            src="./assets/media/coffee.svg"
+            alt=""
+            aria-hidden="true"
+            class="w-10 h-10"
+          />
+        </div>
+        <div
+          class="absolute bottom-40 right-8 md:right-24 animate-float pointer-events-none select-none"
+          style="animation-delay: 1.5s; opacity: 0.18"
+        >
+          <img
+            decoding="async"
+            src="./assets/media/drink.svg"
+            alt=""
+            aria-hidden="true"
+            class="w-12 h-12"
+          />
+        </div>
+        <div
+          class="absolute top-1/2 left-4 md:left-10 animate-float pointer-events-none select-none"
+          style="animation-delay: 0.8s; opacity: 0.13"
+        >
+          <img
+            decoding="async"
+            src="./assets/media/food.svg"
+            alt=""
+            aria-hidden="true"
+            class="w-8 h-8"
+          />
+        </div>
+        <div
+          class="absolute top-28 right-16 md:right-44 animate-float pointer-events-none select-none"
+          style="animation-delay: 2.3s; opacity: 0.14"
+        >
+          <img
+            decoding="async"
+            src="./assets/media/decoration.svg"
+            alt=""
+            aria-hidden="true"
+            class="w-8 h-8"
+          />
+        </div>
+        <div
+          class="relative z-10 w-full max-w-6xl mx-auto px-4 sm:px-6 py-16 pt-24 lg:py-12 lg:pt-20"
+        >
+          <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <div class="order-2 lg:order-1 text-center lg:text-left">
+              <p
+                class="font-body text-xs tracking-[0.25em] uppercase mb-4 animate-fade-up"
+                style="
+                  color: hsl(var(--brand-coral));
+                  animation-delay: 0.1s;
+                  opacity: 0;
+                "
+              >
+                KÁVA • DRINKY • OBČERSTVENÍ
+              </p>
+              <h1
+                class="font-display leading-none tracking-tight animate-fade-up text-5xl sm:text-6xl lg:text-7xl font-medium mb-6"
+                style="
+                  color: hsl(var(--brand-wine));
+                  animation-delay: 0.2s;
+                  opacity: 0;
+                "
+              >
+                Důvod, proč dnes jít na
+                <span style="color: hsl(var(--brand-coral))">Homolku</span>
+              </h1>
+              <p
+                class="font-body text-base sm:text-lg text-foreground/60 leading-relaxed mb-10 max-w-md mx-auto lg:mx-0 animate-fade-up"
+                style="animation-delay: 0.35s; opacity: 0"
+              >
+                Výběrová káva, osvěžující drinky a něco k snědku. Zažij skvělou
+                atmosféru přímo u berounského parku.
+              </p>
+              <div
+                class="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start animate-fade-up"
+                style="animation-delay: 0.5s; opacity: 0"
+              >
+                <a
+                  class="btn-pill btn-primary shadow-md inline-block text-center"
+                  href="#kontakt"
+                  >Kde nás najdete?</a
+                ><a
+                  class="btn-pill btn-outline inline-block text-center"
+                  href="#akce"
+                  >Nadcházející akce</a
+                >
+              </div>
+            </div>
+            <div
+              class="order-1 lg:order-2 relative animate-fade-in"
+              style="animation-delay: 0.3s; opacity: 0"
+            >
+              <div class="relative">
+                <div
+                  class="absolute -top-3 -right-3 w-full h-full rounded-3xl border-2 opacity-30"
+                  style="border-color: hsl(var(--brand-coral))"
+                ></div>
+                <div
+                  class="absolute -bottom-3 -left-3 w-full h-full rounded-3xl border opacity-20"
+                  style="border-color: hsl(var(--brand-wine))"
+                ></div>
+                <div
+                  class="relative rounded-3xl overflow-hidden aspect-[4/3] bg-muted shadow-2xl"
+                >
+                  <img
+                    fetchpriority="high"
+                    decoding="async"
+                    src="./assets/media/airstream.webp"
+                    alt="HOMEolka – Airstream drink point v Berouně"
+                    class="w-full h-full object-cover"
+                    loading="eager"
+                  />
+                  <div
+                    class="absolute inset-0 opacity-10"
+                    style="
+                      background: linear-gradient(
+                        135deg,
+                        hsl(var(--brand-wine)) 0%,
+                        transparent 60%
+                      );
+                    "
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        id="o-nas"
+        class="py-24 sm:py-32"
+        style="background: hsl(var(--brand-cream))"
+      >
+        <div class="max-w-4xl mx-auto px-4 sm:px-6">
+          <div class="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
+            <div class="relative">
+              <div class="rounded-3xl overflow-hidden aspect-[3/4] shadow-xl">
+                <img
+                  decoding="async"
+                  src="./assets/media/coffee-preparation.png"
+                  alt="HOMEolka – příprava kávy"
+                  class="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <div
+                class="absolute -bottom-4 -right-4 w-24 h-24 rounded-2xl opacity-20"
+                style="background: hsl(var(--brand-coral))"
+              ></div>
+            </div>
+            <div>
+              <p
+                class="font-body text-xs tracking-[0.25em] uppercase mb-4"
+                style="color: hsl(var(--brand-coral))"
+              >
+                Náš příběh
+              </p>
+              <h2
+                class="font-display text-5xl sm:text-6xl font-light text-brand-wine leading-tight mb-6"
+              >
+                O nás
+              </h2>
+              <div
+                class="w-10 h-0.5 mb-8"
+                style="background: hsl(var(--brand-coral))"
+              ></div>
+              <p
+                data-content="aboutText"
+                class="font-body text-base leading-loose text-foreground/70"
+              >
+                Chtěli jsme vytvořit místo, kam si rádi zajdete po procházce,
+                cvičení nebo jen tak s dětmi. Vzali jsme přívěs se stříbrným
+                kabátem a naplnili ho tím nejlepším, co máme rádi – od výběrové
+                kávy přes poctivý párek v rohlíku po dokonalé drinky při západu
+                slunce.
+              </p>
+              <div
+                class="grid grid-cols-2 gap-6 mt-10 pt-10 border-t border-border"
+              >
+                <div>
+                  <p class="font-display text-4xl font-medium text-brand-coral">
+                    0%
+                  </p>
+                  <p
+                    class="font-body text-xs tracking-wider uppercase text-foreground/50 mt-1"
+                  >
+                    STRES
+                  </p>
+                </div>
+                <div>
+                  <p class="font-display text-4xl font-medium text-brand-coral">
+                    100%
+                  </p>
+                  <p
+                    class="font-body text-xs tracking-wider uppercase text-foreground/50 mt-1"
+                  >
+                    venkovní zážitek
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="nabidka" class="py-24 sm:py-32 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6">
+          <div class="text-center mb-16">
+            <p
+              class="font-body text-xs tracking-[0.25em] uppercase mb-4"
+              style="color: hsl(var(--brand-coral))"
+            >
+              Co nabízíme
+            </p>
+            <h2
+              class="font-display text-5xl sm:text-6xl font-light text-brand-wine leading-tight"
+            >
+              Co u nás najdete
+            </h2>
+            <div
+              class="w-10 h-0.5 mx-auto mt-6"
+              style="background: hsl(var(--brand-coral))"
+            ></div>
+          </div>
+          <div class="grid sm:grid-cols-3 gap-6 lg:gap-8">
+            <div
+              class="group relative rounded-3xl p-8 border border-border bg-background hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+            >
+              <div
+                class="inline-flex items-center justify-center w-16 h-16 rounded-2xl mb-6 text-brand-coral group-hover:scale-110 transition-transform duration-300"
+                style="background: hsl(var(--brand-coral) / 0.08)"
+              >
+                <img
+                  decoding="async"
+                  src="./assets/media/coffee.svg"
+                  alt=""
+                  aria-hidden="true"
+                  class="w-6 h-6"
+                />
+              </div>
+              <h3
+                class="font-display text-2xl font-medium text-brand-wine mb-3"
+              >
+                Káva &amp; Pohoda
+              </h3>
+              <p class="font-body text-sm leading-loose text-foreground/60">
+                Výběrová káva připravovaná s důrazem na chuť i detail. Krátké
+                espresso, odpolední cappuccino a klidná atmosféra navíc.
+              </p>
+            </div>
+            <div
+              class="group relative rounded-3xl p-8 border border-border bg-background hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+            >
+              <div
+                class="inline-flex items-center justify-center w-16 h-16 rounded-2xl mb-6 text-brand-coral group-hover:scale-110 transition-transform duration-300"
+                style="background: hsl(var(--brand-coral) / 0.08)"
+              >
+                <img
+                  decoding="async"
+                  src="./assets/media/food.svg"
+                  alt=""
+                  aria-hidden="true"
+                  class="w-9 h-9"
+                />
+              </div>
+              <h3
+                class="font-display text-2xl font-medium text-brand-wine mb-3"
+              >
+                Něco k snědku
+              </h3>
+              <p class="font-body text-sm leading-loose text-foreground/60">
+                Kvalitní zmrzlina, poctivý párek v rohlíku a rychké dobroty na
+                cestu. Jednoduché, čerstvé a přesně to, na co máte chuť.
+              </p>
+            </div>
+            <div
+              class="group relative rounded-3xl p-8 border border-border bg-background hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+            >
+              <div
+                class="inline-flex items-center justify-center w-16 h-16 rounded-2xl mb-6 text-brand-coral group-hover:scale-110 transition-transform duration-300"
+                style="background: hsl(var(--brand-coral) / 0.08)"
+              >
+                <img
+                  decoding="async"
+                  src="./assets/media/drink.svg"
+                  alt=""
+                  aria-hidden="true"
+                  class="w-9 h-9"
+                />
+              </div>
+              <h3
+                class="font-display text-2xl font-medium text-brand-wine mb-3"
+              >
+                Drink Point
+              </h3>
+              <p class="font-body text-sm leading-loose text-foreground/60">
+                Osvěžující limonády, dobré víno a pivo i lehké signature drinky.
+                Ideální tečka po dni u parku nebo při západu slunce.
+              </p>
+            </div>
+          </div>
+          <div class="text-center mt-14">
+            <a
+              href="./assets/media/menu.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-pill btn-primary inline-flex items-center gap-2"
+              ><svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+                />
+                <polyline points="14 2 14 8 20 8" />
+                <line x1="16" y1="13" x2="8" y2="13" />
+                <line x1="16" y1="17" x2="8" y2="17" />
+                <polyline points="10 9 9 9 8 9" /></svg
+              >Zobrazit kompletní menu</a
+            >
+            <p class="font-body text-xs text-foreground/40 mt-4">
+              Nabídka se může podle sezóny a dostupnosti mírně měnit.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section
+        id="oteviraci-doba"
+        class="py-24 sm:py-32"
+        style="background: hsl(var(--brand-cream))"
+      >
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
+          <p
+            class="font-body text-xs tracking-[0.25em] uppercase mb-4"
+            style="color: hsl(var(--brand-coral))"
+          >
+            Otevírací doba
+          </p>
+          <h2
+            class="font-display text-5xl sm:text-6xl font-light text-brand-wine leading-tight mb-6"
+          >
+            Kdy se potkáme?
+          </h2>
+          <div
+            class="w-10 h-0.5 mx-auto mb-10"
+            style="background: hsl(var(--brand-coral))"
+          ></div>
+          <p
+            data-content="openingNote"
+            class="font-body text-base text-foreground/60 leading-loose mb-10 max-w-lg mx-auto"
+          >
+            Naše otevíračka se řídí počasím a náladou v parku. Když prší nebo
+            mrzne, ladíme receptury uvnitř přívěsu.
+          </p>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-pill btn-outline inline-flex items-center gap-2"
+            href="https://www.instagram.com/stories/highlights/18351603820243852/"
+            ><svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path
+                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"
+              /></svg
+            >Sledujte aktuální Stories</a
+          >
+        </div>
+      </section>
+      <section id="akce" class="py-24 sm:py-32 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6">
+          <div class="text-center mb-16">
+            <p
+              class="font-body text-xs tracking-[0.25em] uppercase mb-4"
+              style="color: hsl(var(--brand-coral))"
+            >
+              Co chystáme
+            </p>
+            <h2
+              class="font-display text-5xl sm:text-6xl font-light text-brand-wine leading-tight"
+            >
+              Akce &amp; Eventy
+            </h2>
+            <div
+              class="w-10 h-0.5 mx-auto mt-6"
+              style="background: hsl(var(--brand-coral))"
+            ></div>
+            <p
+              class="font-body text-base text-foreground/60 mt-6 max-w-xl mx-auto leading-loose"
+            >
+              HOMEolka zavítá na festivaly, svatby, firemní teambuildiny i
+              soukromé oslavy. Přivezeme vše co od nás máte rádi a&#160;
+              nezaměnitelnou atmosféru.
+            </p>
+          </div>
+          <div id="events-list" class="grid sm:grid-cols-2 gap-6">
+            <div class="rounded-3xl h-52 bg-muted animate-pulse"></div>
+            <div class="rounded-3xl h-52 bg-muted animate-pulse"></div>
+          </div>
+          <div
+            class="mt-16 rounded-3xl p-10 sm:p-14 text-center"
+            style="background: hsl(var(--brand-wine))"
+          >
+            <p
+              class="font-body text-xs tracking-[0.25em] uppercase mb-4"
+              style="color: hsl(var(--brand-coral))"
+            >
+              Chcete nás u sebe?
+            </p>
+            <h3
+              class="font-display text-4xl sm:text-5xl font-light text-white mb-4"
+            >
+              Zapřáhneme přívěs a přijedeme za vámi
+            </h3>
+            <p
+              class="font-body text-sm text-white/60 leading-loose mb-8 max-w-lg mx-auto"
+            >
+              Plánujete svatbu, oslavu nebo firemní teambuilding? Přivezeme
+              kávu, drinky i tu správnou atmosféru.
+            </p>
+            <a
+              class="btn-pill btn-primary inline-block shadow-lg"
+              href="mailto:info@homeolka.cz"
+              >Napište nám na info@homeolka.cz</a
+            >
+          </div>
+        </div>
+      </section>
+      <section
+        id="instagram"
+        class="py-24 sm:py-32"
+        style="background: hsl(var(--brand-cream))"
+      >
+        <div class="max-w-5xl mx-auto px-4 sm:px-6">
+          <div class="text-center mb-12">
+            <p
+              class="font-body text-xs tracking-[0.25em] uppercase mb-4"
+              style="color: hsl(var(--brand-coral))"
+            >
+              @homeolka
+            </p>
+            <h2
+              class="font-display text-5xl sm:text-6xl font-light text-brand-wine leading-tight"
+            >
+              Sledujte naši jízdu
+            </h2>
+            <div
+              class="w-10 h-0.5 mx-auto mt-6"
+              style="background: hsl(var(--brand-coral))"
+            ></div>
+          </div>
+          <div id="gallery-list" class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+            <div class="aspect-square bg-muted rounded-2xl animate-pulse"></div>
+            <div class="aspect-square bg-muted rounded-2xl animate-pulse"></div>
+            <div class="aspect-square bg-muted rounded-2xl animate-pulse"></div>
+            <div class="aspect-square bg-muted rounded-2xl animate-pulse"></div>
+            <div class="aspect-square bg-muted rounded-2xl animate-pulse"></div>
+            <div class="aspect-square bg-muted rounded-2xl animate-pulse"></div>
+          </div>
+          <div class="text-center mt-10">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-pill btn-outline inline-flex items-center gap-2"
+              href="https://www.instagram.com/homeolka"
+              ><svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"
+                /></svg
+              >Sledovat na Instagramu</a
+            >
+          </div>
+        </div>
+      </section>
+      <section id="kontakt" class="py-24 sm:py-32 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6">
+          <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+            <div>
+              <p
+                class="font-body text-xs tracking-[0.25em] uppercase mb-4"
+                style="color: hsl(var(--brand-coral))"
+              >
+                Kontakt
+              </p>
+              <h2
+                class="font-display text-5xl sm:text-6xl font-light text-brand-wine leading-tight mb-6"
+              >
+                Napište nám
+              </h2>
+              <div
+                class="w-10 h-0.5 mb-10"
+                style="background: hsl(var(--brand-coral))"
+              ></div>
+              <div class="space-y-6">
+                <div class="flex items-center gap-4">
+                  <div
+                    class="flex-shrink-0 w-12 h-12 rounded-xl flex items-center justify-center"
+                    style="background: hsl(var(--brand-coral) / 0.1)"
+                  >
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      style="color: hsl(var(--brand-coral))"
+                    >
+                      <rect width="20" height="16" x="2" y="4" rx="2" />
+                      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p
+                      class="font-body text-xs text-foreground/40 tracking-wider uppercase"
+                    >
+                      Email
+                    </p>
+                    <a
+                      class="font-body text-base font-500 text-brand-wine hover:text-brand-coral transition-colors"
+                      href="mailto:info@homeolka.cz"
+                      >info@homeolka.cz</a
+                    >
+                  </div>
+                </div>
+                <div class="flex items-center gap-4">
+                  <div
+                    class="flex-shrink-0 w-12 h-12 rounded-xl flex items-center justify-center"
+                    style="background: hsl(var(--brand-coral) / 0.1)"
+                  >
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      style="color: hsl(var(--brand-coral))"
+                    >
+                      <path
+                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <p
+                      class="font-body text-xs text-foreground/40 tracking-wider uppercase"
+                    >
+                      Instagram
+                    </p>
+                    <a
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="font-body text-base font-500 text-brand-wine hover:text-brand-coral transition-colors"
+                      href="https://www.instagram.com/homeolka"
+                      >@homeolka</a
+                    >
+                  </div>
+                </div>
+                <div class="flex items-center gap-4">
+                  <div
+                    class="flex-shrink-0 w-12 h-12 rounded-xl flex items-center justify-center"
+                    style="background: hsl(var(--brand-coral) / 0.1)"
+                  >
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      style="color: hsl(var(--brand-coral))"
+                    >
+                      <path
+                        d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <p
+                      class="font-body text-xs text-foreground/40 tracking-wider uppercase"
+                    >
+                      Facebook
+                    </p>
+                    <a
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="font-body text-base font-500 text-brand-wine hover:text-brand-coral transition-colors"
+                      href="https://www.facebook.com/homeolka"
+                      >homeolka</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <p
+                class="font-body text-xs text-foreground/40 mt-10 leading-relaxed"
+              >
+                Když svítí sluníčko, jsme tu pro vás.
+              </p>
+            </div>
+            <div>
+              <button
+                id="load-map"
+                class="w-full aspect-video rounded-3xl border border-border bg-muted flex flex-col items-center justify-center gap-3 hover:bg-secondary/50 transition-colors group"
+              >
+                <div
+                  class="w-14 h-14 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform"
+                  style="background: hsl(var(--brand-coral) / 0.1)"
+                >
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    style="color: hsl(var(--brand-coral))"
+                  >
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z" />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg>
+                </div>
+                <div>
+                  <p class="font-body text-sm font-600 text-foreground/70">
+                    Načíst mapu
+                  </p>
+                  <p class="font-body text-xs text-foreground/40">
+                    Google Maps · kliknutím povolíte načtení
+                  </p>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="max-w-5xl mx-auto px-4 sm:px-6 mt-20 pt-8 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4"
+        >
+          <span class="font-display text-xl font-medium text-brand-wine"
+            >homeolka</span
+          >
+          <p class="font-body text-xs text-foreground/40 text-center">
+            ©
+            <!-- -->2026<!-- -->
+            HOMEolka · Stříbrný přívěs
+          </p>
+          <div class="flex items-center gap-4">
+            <button
+              id="privacy-settings"
+              class="font-body text-xs text-foreground/40 hover:text-brand-coral transition-colors"
+            >
+              Nastavení soukromí</button
+            ><a
+              class="font-body text-xs text-foreground/25 hover:text-foreground/50 transition-colors"
+              href="./admin/"
+              >Admin</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+    <!--$--><!--/$-->
+    <div
+      aria-label="Nastavení cookies"
+      role="region"
+      hidden
+      id="cookie-banner"
+      class="fixed bottom-4 left-4 right-4 sm:left-auto sm:right-6 sm:bottom-6 sm:max-w-sm z-50 animate-fade-up"
+    >
+      <div class="glass rounded-2xl border border-border shadow-xl p-5">
+        <p class="font-display text-lg font-medium text-brand-wine mb-2">
+          Cookies 🍪
+        </p>
+        <p class="font-body text-xs text-foreground/60 leading-relaxed mb-2">
+          Používáme analytické cookies (GA4) pro zlepšování webu. Vaší volbou
+          nejsou dotčeny žádné nezbytné funkce.
+        </p>
+        <p class="font-body text-xs text-foreground/45 leading-relaxed mb-4">
+          Volbu můžete kdykoli změnit v odkazu „Nastavení soukromí" v patičce
+          stránky. Více v dokumentech:
+          <a
+            href="./assets/media/zasady-cookies.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="underline hover:text-brand-coral transition-colors"
+            >Zásady cookies</a
+          >
+          a
+          <a
+            href="./assets/media/zasady-ochrany-osobnich-udaju.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="underline hover:text-brand-coral transition-colors"
+            >Ochrana osobních údajů</a
+          >.
+        </p>
+        <div class="flex gap-2">
+          <button
+            id="reject-cookies"
+            class="flex-1 btn-pill border border-border text-foreground/60 hover:text-foreground hover:border-foreground/30 text-xs py-2 transition-colors"
+          >
+            Odmítnout</button
+          ><button
+            id="accept-cookies"
+            class="flex-1 btn-pill btn-primary text-xs py-2"
+          >
+            Přijmout vše
+          </button>
         </div>
       </div>
     </div>
-  </footer>
-
-  <div id="cookieBanner" class="hidden fixed bottom-4 inset-x-4 z-[60]">
-    <div class="max-w-3xl mx-auto glass soft-shadow rounded-2xl p-4 md:p-5">
-      <p class="text-sm md:text-base">Používáme pouze nezbytné cookies a volitelnou analytiku (GA4) pro zlepšování webu.</p>
-      <p class="text-xs opacity-80 mt-1">Volbu můžete kdykoli změnit v odkazu „Nastavení soukromí" ve footeru. Více v dokumentech: <a href="./zasady-cookies.pdf" target="_blank" rel="noreferrer" class="underline">Zásady cookies</a> a <a href="./zasady-ochrany-osobnich-udaju.pdf" target="_blank" rel="noreferrer" class="underline">Ochrana osobních údajů</a>.</p>
-      <div class="mt-3 flex flex-col sm:flex-row gap-2 sm:justify-end">
-        <button id="rejectAllBtn" type="button" class="btn btn-outline text-sm">Odmítnout vše</button>
-        <button id="acceptAllBtn" type="button" class="btn btn-coral text-sm">Přijmout vše</button>
-      </div>
-    </div>
-  </div>
-
-  <script src="assets/js/main.js" defer></script>
-</body>
+  </body>
 </html>
